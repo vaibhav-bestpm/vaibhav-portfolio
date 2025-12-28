@@ -1,0 +1,181 @@
+You are a senior frontend engineer with strong product and design sensibilities.
+You specialize in building clean, recruiter-friendly portfolio websites for senior Product Leaders that showcase:
+- Product thinking
+- GenAI & technical depth
+- GitHub repositories (code artifacts)
+- Figma files (UX / product design artifacts)
+
+TASK:
+Build a production-ready, single-page portfolio website for Vaibhav Vats.
+
+STRICT TECH CONSTRAINTS:
+- Use ONLY HTML, modern CSS (Flexbox / Grid), and minimal vanilla JS
+- NO React, Vue, frameworks, build tools, or bundlers
+- Everything must live in a single index.html file
+- CSS inside <style>, JS inside <script>
+- Must run immediately with no configuration
+- Optimized for GitHub Pages / Netlify
+
+GLOBAL UX & DESIGN CONSTRAINTS:
+- Dark theme (high contrast, professional, not flashy)
+- Max content width: 1200px, centered
+- Large whitespace, strong typography hierarchy
+- Mobile responsive
+- Fast loading
+- Recruiter skim-friendly
+- One-page vertical scroll with anchor navigation
+
+SITE STRUCTURE (FOLLOW EXACTLY):
+
+1. Sticky Top Navigation
+   - Left: “Vaibhav Vats”
+   - Right: About | Work | Skills | Experience | Contact
+   - Smooth anchor scrolling
+
+2. Hero Section (85–100vh)
+   - Name: Vaibhav Vats
+   - Positioning (NOT a generic job title):
+     “Product Leader | GenAI-First | SaaS, MarTech & HealthTech”
+   - Value proposition (1–2 lines):
+     “Product leader with 7+ years of end-to-end product ownership and 15+ years overall experience building and scaling AI-driven SaaS products across India and US markets.”
+   - Two CTAs:
+     - “View Selected Work” (scroll to Work)
+     - “Download Resume” (placeholder link)
+
+3. Credibility Strip (Short Band)
+   - Horizontal markers:
+     “15+ Years Experience”
+     “7+ Years Product Leadership”
+     “GenAI & LLMs”
+     “SaaS, MarTech, HealthTech, EdTech”
+     “India & US Markets”
+
+4. About / Snapshot
+   - Short professional narrative (first person, concise)
+   - Bullet highlights derived from:
+     - Multi-product ownership
+     - AI-led product development
+     - Strong business outcomes (500% ARPU, 120% WAU, 3.5x scale)
+     - High-velocity execution
+
+5. Selected Work & Projects (MOST IMPORTANT SECTION)
+   - Vertical project cards (NOT dense grids)
+   - Each card MUST support multiple artifact links
+   - Clearly differentiate Code vs Design vs Product work
+
+   FEATURED PROJECTS (USE THESE EXACTLY):
+
+   A) Zoom Integration Experiment
+      - GitHub: https://github.com/vaibhav-bestpm/Zoom-integration-exp
+      - Type: Integration / Platform Experiment
+      - Artifact: “GitHub Repo”
+
+   B) LoRA Scripts (GenAI)
+      - GitHub: https://github.com/vaibhav-bestpm/used-lora-scripts
+      - Type: GenAI / LLM Experimentation
+      - Artifact: “GitHub Repo”
+
+   C) AstroVoyager
+      - GitHub: https://github.com/vaibhav-bestpm/astrovoyager
+      - Type: AI-driven application
+      - Artifact: “GitHub Repo”
+
+   D) Awesome Remote Job
+      - GitHub: https://github.com/vaibhav-bestpm/awesome-remote-job
+      - Type: Curated Platform / Utility
+      - Artifact: “GitHub Repo”
+
+   E) Tithiya (Private / Work in Progress)
+      - Status: Private repository (no link)
+      - Type: Product Concept & Platform Build
+      - Label clearly as:
+        “Private – Concept, UX, Architecture & Product Thinking”
+      - Do NOT include a GitHub link
+
+   For EACH project card include:
+   - Project name
+   - Role / context
+   - Short Problem → Action → Outcome narrative
+   - Metrics where relevant
+   - Artifact buttons:
+     - “GitHub Repo” (external, new tab)
+     - Optional “Figma Design” (if applicable)
+     - Optional “Case Study”
+
+   IMPORTANT:
+   - Do NOT embed GitHub
+   - External links only
+   - Clear visual hierarchy between projects
+
+6. Figma / Design Artifacts (Product-led framing)
+   - Present as “Product & UX Work”
+   - External links only (no iframes)
+
+   Include the following Figma files:
+   - Generative AI Mockups
+     https://www.figma.com/design/V7wNDVOBzHrFXfDDAoUw3y/Generative-AI-MockUps
+   - Care Navigator Portal (v1)
+     https://www.figma.com/design/42TJPkymRs7yNCNNxDQJy9/Care-Navigator-Portal-Working-File
+   - Care Navigator Portal (v2)
+     https://www.figma.com/design/GeFLY9yeMpRLvAEIXsLDaN/Care-Navigator-Portal-Working-File-2
+   - Influencer App
+     https://www.figma.com/design/PaOE2aZgSlPgz034xNt2mO/Influencer-App
+   - Mindbridge App Concept
+     https://www.figma.com/design/fFvP7yc5gXJGYT18E0ZCGy/mindbridge-app-concept
+   - DSP Screens
+     https://www.figma.com/design/GDw5xRtX6rRZ6vIMmSz8n6/DSP-screens
+   - Smartfluence – Brand & Creator Screens
+     https://www.figma.com/design/SmlFdaFbzOyQekZNQSDGta/Smartfluence-Brand---Content-Creator-Screens
+
+7. Skills & Tooling
+   - Grouped text sections (no logo overload):
+
+     Product Leadership:
+     Roadmaps, Prioritization, Multi-product Ownership, Discovery, OKRs
+
+     AI & GenAI:
+     LLMs, GenAI Features, Recommendation Systems, Automation, APIs
+
+     Execution & Growth:
+     Agile, Backlogs, Funnels, Retention, GTM, Experimentation
+
+     Analytics & Tools:
+     GA4, Mixpanel, Amplitude, SQL, Segment, Jira, Confluence, Figma
+
+8. Experience Timeline (Condensed, Outcome-Focused)
+   - Roles to include:
+     - Product Head – KnowledgeCity
+     - Group Product Manager – CareCentra (Smartfluence, MyMobeMap)
+     - Product & Marketing Head – DBMCI / eGurukul
+     - Founder & Product Lead – Mark N Comm PR
+     - Product Manager – Classteacher
+   - Each role:
+     - Role | Company | Period
+     - ONE strong impact line (metrics-driven)
+
+9. Contact / Conversion
+   - Headline: “Let’s build something meaningful”
+   - Email: vaibhav.vats.branding@gmail.com
+   - Phone: +91 9818852212
+   - LinkedIn: https://www.linkedin.com/in/vaibhavprodman
+
+10. Footer
+   - © Vaibhav Vats
+   - “Last updated 2025”
+
+DESIGN GUIDELINES:
+- Dark, neutral, professional palette
+- Elegant Google Fonts allowed
+- Subtle hover states
+- No distracting animations
+- Clarity over decoration
+
+OUTPUT REQUIREMENTS:
+- Return ONLY complete HTML code
+- Use clean, semantic markup
+- Meaningful class names
+- Realistic placeholder copy aligned to senior Product Leader profile
+- Ready for deployment without modification
+
+GOAL:
+Produce a near-final, high-impact portfolio website that requires minimal manual edits and no architectural rework.
