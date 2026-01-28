@@ -7,101 +7,103 @@
   <title>Vaibhav Vats – Product Leader | GenAI-First | SaaS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --color-bg: #0a0e27;
-      --color-bg-secondary: #141829;
-      --color-text: #e4e8f0;
-      --color-text-muted: #b0b8c8;
-      --color-accent: #6366f1;
-      --color-accent-hover: #818cf8;
-      --color-border: #2a2e42;
-      --spacing-unit: 1rem;
-      --max-width: 1200px;
+      --color-bg: #f8fafc;
+      --color-card: #ffffff;
+      --color-text: #0f172a;
+      --color-text-muted: #475569;
+      --color-accent: #4f46e5;
+      --color-border: #e2e8f0;
+      --color-whatsapp: #25D366;
+      --color-linkedin: #0077b5;
+      --max-width: 1100px;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; font-size: 16px; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; }
 
     /* NAVIGATION */
-    nav { position: sticky; top: 0; z-index: 1000; background: rgba(10, 14, 39, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); padding: 1.5rem 0; }
+    nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); padding: 1.2rem 0; }
     .nav-container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-    .nav-logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.5px; }
-    .nav-links { display: flex; list-style: none; gap: 2.5rem; }
-    .nav-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s; }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; color: var(--color-text); letter-spacing: -0.5px; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.8rem; font-weight: 700; transition: 0.3s; text-transform: uppercase; }
     .nav-links a:hover { color: var(--color-accent); }
 
-    /* HERO SECTION */
-    .hero { min-height: 90vh; display: flex; align-items: center; justify-content: center; padding: 4rem 2rem; }
-    .hero-content { max-width: 1000px; text-align: center; }
-    .hero-image { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-accent); margin-bottom: 2rem; box-shadow: 0 8px 32px rgba(99, 102, 241, 0.2); }
-    .hero-name { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800; letter-spacing: -1.5px; margin-bottom: 1.5rem; }
-    .hero-positioning { font-size: clamp(1.25rem, 3vw, 1.75rem); color: var(--color-accent); font-weight: 600; margin-bottom: 2rem; }
-    .hero-proposition { font-size: 1.1rem; color: var(--color-text-muted); max-width: 700px; margin: 0 auto 3rem; }
+    /* HERO */
+    .hero { min-height: 75vh; display: flex; align-items: center; padding: 4rem 2rem; background: radial-gradient(circle at top right, #eef2ff 0%, #f8fafc 50%); }
+    .hero-content { max-width: 850px; margin: 0 auto; text-align: center; }
+    .hero-image { width: 140px; height: 140px; border-radius: 32px; object-fit: cover; margin-bottom: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 4px solid white; }
+    .hero-name { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -2px; margin-bottom: 1rem; line-height: 1.1; color: #1e293b; }
+    .hero-positioning { font-size: 1.3rem; color: var(--color-accent); font-weight: 700; margin-bottom: 1.5rem; }
+    .hero-proposition { font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 2.5rem; max-width: 650px; margin-left: auto; margin-right: auto; }
 
-    .btn { padding: 0.75rem 1.75rem; font-size: 0.95rem; font-weight: 600; border-radius: 6px; text-decoration: none; transition: all 0.3s; display: inline-block; }
-    .btn-primary { background-color: var(--color-accent); color: white; border: 1px solid var(--color-accent); }
-    .btn-primary:hover { background-color: var(--color-accent-hover); }
-    .btn-secondary { background-color: transparent; color: var(--color-text); border: 1px solid var(--color-border); margin-left: 1rem; }
+    .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 700; border-radius: 12px; text-decoration: none; transition: 0.3s; display: inline-flex; align-items: center; gap: 0.6rem; }
+    .btn-primary { background: var(--color-accent); color: white; }
+    .btn-secondary { background: white; color: var(--color-text); border: 1px solid var(--color-border); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2); }
 
-    /* CREDIBILITY STRIP */
-    .credibility { background-color: var(--color-bg-secondary); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); padding: 5rem 2rem; }
-    .credibility-content { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center; }
-    .credibility-item { font-weight: 600; font-size: 0.95rem; }
-    .credibility-item span { display: block; color: var(--color-accent); font-weight: 700; font-size: 1.1rem; margin-bottom: 0.5rem; }
+    /* CREDIBILITY STRIP (AS PER SCREENSHOT) */
+    .credibility { background: #0a0e27; padding: 4rem 2rem; color: white; }
+    .credibility-content { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; text-align: center; }
+    .credibility-item span { display: block; color: #6366f1; font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .credibility-item p { font-size: 0.85rem; font-weight: 600; color: #b0b8c8; }
 
     /* SECTIONS */
-    section { padding: 5rem 2rem; }
-    .section-container { max-width: var(--max-width); margin: 0 auto; }
-    .section-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 3.5rem; letter-spacing: -0.5px; }
+    section { padding: 8rem 0; }
+    .section-container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
+    .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 3.5rem; color: #1e293b; letter-spacing: -1px; }
 
-    /* ABOUT HIGHLIGHTS */
-    .about-narrative { max-width: 900px; font-size: 1rem; color: var(--color-text-muted); margin-bottom: 3rem; }
-    .about-highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; }
-    .highlight-item { padding: 1.75rem; background-color: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 8px; }
-    .highlight-label { font-size: 0.85rem; color: var(--color-accent); font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; }
-    .highlight-metric { font-size: 1.5rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem; }
-    .highlight-description { font-size: 0.9rem; color: var(--color-text-muted); }
+    /* ABOUT IMPACT CARDS */
+    .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
+    .metric-card { background: white; padding: 2.5rem 2rem; border-radius: 24px; border: 1px solid var(--color-border); }
+    .metric-num { display: block; font-size: 2rem; font-weight: 800; color: var(--color-accent); margin-bottom: 0.5rem; }
+    .metric-title { font-size: 1rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .metric-label { font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); line-height: 1.5; }
 
-    /* WORK CARDS */
-    .project-card { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 2.5rem; margin-bottom: 3rem; transition: 0.3s; }
-    .project-card:hover { border-color: var(--color-accent); }
-    .project-name { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .project-role { font-size: 0.9rem; color: var(--color-accent); font-weight: 600; text-transform: uppercase; margin-bottom: 1rem; }
-    .artifact-link { padding: 0.5rem 1.25rem; background-color: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 4px; font-size: 0.85rem; color: var(--color-accent); text-decoration: none; font-weight: 600; }
+    /* WORK GRID */
+    .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .project-card { background: white; border: 1px solid var(--color-border); border-radius: 24px; padding: 2.5rem; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
+    .project-card:hover { transform: translateY(-8px); border-color: var(--color-accent); box-shadow: 0 30px 60px rgba(0,0,0,0.06); }
+    .project-tag { font-size: 0.75rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 1.2rem; display: block; }
+    .project-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.2rem; }
+    .project-desc { font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2.5rem; }
+    .link-btn { font-size: 0.9rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-accent); padding-bottom: 2px; }
 
-    /* DESIGN GRID */
-    .design-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-    .design-card { background-color: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 8px; padding: 1.75rem; transition: 0.3s; }
+    /* DESIGN GALLERY */
+    .design-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+    .design-card { background: white; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.8rem; transition: 0.3s; }
     .design-card:hover { border-color: var(--color-accent); }
-    .design-link { color: var(--color-accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
-
-    /* CERTIFICATIONS GRID */
-    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
-    .cert-card { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; }
-    .cert-title { font-size: 1rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem; }
-    .cert-issuer { font-size: 0.85rem; color: var(--color-accent); font-weight: 600; text-transform: uppercase; }
-
-    /* SKILLS GRID */
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
-    .skill-category-title { font-size: 1rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; margin-bottom: 1rem; }
-    .skill-items { color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.9; }
 
     /* EXPERIENCE */
-    .experience-item { padding: 2.25rem; background-color: var(--color-bg-secondary); border-left: 3px solid var(--color-accent); margin-bottom: 2rem; border-radius: 4px; }
-    .experience-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; margin-bottom: 0.75rem; }
-    .experience-role { font-size: 1.15rem; font-weight: 700; }
-    .experience-company { color: var(--color-accent); font-weight: 600; }
+    .exp-item { padding: 2.5rem; background: white; border-radius: 24px; border: 1px solid var(--color-border); margin-bottom: 1.5rem; display: flex; justify-content: space-between; }
+    .exp-company { color: var(--color-accent); font-weight: 700; font-size: 1.05rem; margin-bottom: 0.8rem; display: block; }
+    .exp-date { font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted); background: #f1f5f9; padding: 0.4rem 0.8rem; border-radius: 8px; align-self: flex-start; }
+
+    /* SKILLS */
+    .skills-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; }
+    .skill-title { font-size: 0.85rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 1.2rem; }
+    .skill-list { color: var(--color-text-muted); font-size: 0.95rem; font-weight: 500; }
+
+    /* CERTIFICATIONS */
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
+    .cert-card { padding: 1.5rem; background: white; border: 1px solid var(--color-border); border-radius: 12px; }
+    .cert-issuer { color: var(--color-accent); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem; }
 
     /* CONTACT */
-    .contact { text-align: center; background-color: var(--color-bg-secondary); }
-    .contact-link { color: var(--color-accent); text-decoration: none; font-weight: 600; display: block; margin-bottom: 1.5rem; }
-    footer { padding: 2.5rem; text-align: center; color: var(--color-text-muted); font-size: 0.9rem; border-top: 1px solid var(--color-border); }
+    .contact { text-align: center; padding: 10rem 0; background: white; }
+    .contact-big { font-size: 3rem; font-weight: 800; margin-bottom: 2.5rem; }
+    .btn-whatsapp { background: var(--color-whatsapp); color: white; }
+    .btn-linkedin { background: var(--color-linkedin); color: white; }
+    footer { padding: 4rem; text-align: center; color: var(--color-text-muted); font-size: 0.9rem; border-top: 1px solid var(--color-border); }
 
-    @media (max-width: 768px) {
-      .btn-secondary { margin-left: 0; margin-top: 1rem; width: 100%; text-align: center; }
-      .btn-primary { width: 100%; text-align: center; }
+    @media (max-width: 900px) {
+      .credibility-content, .metrics-grid, .work-grid { grid-template-columns: 1fr; }
+      .exp-item { flex-direction: column; gap: 1rem; }
+      .nav-links { display: none; }
     }
   </style>
 </head>
@@ -109,7 +111,7 @@
 
   <nav>
     <div class="nav-container">
-      <div class="nav-logo">Vaibhav Vats</div>
+      <div class="nav-logo">VAIBHAV VATS</div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
@@ -129,187 +131,170 @@
       <p class="hero-proposition">
         Product leader with 13+ years of end-to-end product ownership building and scaling AI-driven SaaS products across India and US markets.
       </p>
-      <div class="hero-ctas">
+      <div class="btn-group">
         <a href="#work" class="btn btn-primary">View Selected Work</a>
-        <a href="resume.pdf" download class="btn btn-secondary">Download Resume</a>
+        <a href="resume.pdf" download class="btn btn-secondary">Download CV</a>
       </div>
     </div>
   </section>
 
   <div class="credibility">
     <div class="credibility-content">
-      <div class="credibility-item"><span>13+</span> Years Experience</div>
-      <div class="credibility-item"><span>7+</span> Product Leadership</div>
-      <div class="credibility-item"><span>GenAI & LLMs</span> AI Innovation</div>
-      <div class="credibility-item"><span>SaaS, MarTech, HealthTech</span> Domain Expertise</div>
-      <div class="credibility-item"><span>India & US Markets</span> Global Experience</div>
+      <div class="credibility-item"><span>13+</span><p>Years Experience</p></div>
+      <div class="credibility-item"><span>7+</span><p>Product Leadership</p></div>
+      <div class="credibility-item"><span>GenAI & LLMs</span><p>AI Innovation</p></div>
+      <div class="credibility-item"><span>SaaS, MarTech, HealthTech</span><p>Domain Expertise</p></div>
+      <div class="credibility-item"><span>India & US Markets</span><p>Global Experience</p></div>
     </div>
   </div>
 
-  <section class="about" id="about">
+  <section id="about">
     <div class="section-container">
-      <h2 class="section-title">About</h2>
-      <p class="about-narrative">
+      <h2 class="section-title">About & Strategic Impact</h2>
+      <p style="font-size: 1.15rem; color: var(--color-text-muted); max-width: 900px;">
         I'm a product leader obsessed with leveraging generative AI to solve complex, real-world problems. With 13+ years in technology and 7+ years driving product strategy at scale, I combine strong product thinking with technical depth and a relentless focus on customer value.
       </p>
-      <div class="about-highlights">
-        <div class="highlight-item">
-          <div class="highlight-label">Product Impact</div>
-          <div class="highlight-metric">4–5× ARPU uplift</div>
-          <div class="highlight-description">driven by pricing, packaging, and feature-led monetization across products</div>
+      
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <span class="metric-num">4–5×</span>
+          <h4 class="metric-title">Product Impact</h4>
+          <p class="metric-label">ARPU uplift driven by pricing, packaging, and feature-led monetization across products.</p>
         </div>
-        <div class="highlight-item">
-          <div class="highlight-label">Growth & Retention</div>
-          <div class="highlight-metric">+30–40%</div>
-          <div class="highlight-description">improvement in retention & engagement through onboarding and optimization</div>
+        <div class="metric-card">
+          <span class="metric-num">+30–40%</span>
+          <h4 class="metric-title">Growth & Retention</h4>
+          <p class="metric-label">Improvement in retention & engagement through onboarding and optimization.</p>
         </div>
-        <div class="highlight-item">
-          <div class="highlight-label">Scale & Ownership</div>
-          <div class="highlight-metric">3×+ active users</div>
-          <div class="highlight-description">scaled products across SaaS platforms in India & US markets</div>
+        <div class="metric-card">
+          <span class="metric-num">3×+</span>
+          <h4 class="metric-title">Scale & Ownership</h4>
+          <p class="metric-label">Active users scaled across SaaS platforms in India & US markets.</p>
         </div>
       </div>
-      <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-text-muted); opacity: 0.7;">
+      <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--color-text-muted); font-style: italic;">
         Metrics measured across full product lifecycles (6–12 months).
       </p>
     </div>
   </section>
 
-  <section class="work" id="work" style="background-color: var(--color-bg-secondary);">
+  <section id="work" style="background: white;">
     <div class="section-container">
-      <h2 class="section-title">Selected Work</h2>
-      
-      <div class="project-card">
-        <div class="project-role">AI-Driven Application</div>
-        <h3 class="project-name">AstroVoyager</h3>
-        <p class="about-narrative">AI-powered exploration platform leveraging LLMs. Demonstrates full-stack product thinking from technical architecture to shipping scalable AI-first experiences.</p>
-        <a href="https://github.com/vaibhav-bestpm/astrovoyager" target="_blank" class="artifact-link">→ GitHub Repo</a>
+      <h2 class="section-title">Selected Work (Technical)</h2>
+      <div class="work-grid">
+        <div class="project-card">
+          <div>
+            <span class="project-tag">AI-Driven Application</span>
+            <h3 class="project-title">AstroVoyager</h3>
+            <p class="project-desc">AI-powered exploration platform leveraging LLMs. Full-stack product thinking from technical architecture to shipping scalable AI-first experiences.</p>
+          </div>
+          <a href="https://github.com/vaibhav-bestpm/astrovoyager" target="_blank" class="link-btn">→ View GitHub Repo</a>
+        </div>
+        <div class="project-card">
+          <div>
+            <span class="project-tag">GenAI / LLM Experimentation</span>
+            <h3 class="project-title">LoRA Scripts</h3>
+            <p class="project-desc">Experimental work in fine-tuning and optimization of LLMs using Low-Rank Adaptation (LoRA). Critical R&D for AI-first product strategies.</p>
+          </div>
+          <a href="https://github.com/vaibhav-bestpm/used-lora-scripts" target="_blank" class="link-btn">→ View GitHub Repo</a>
+        </div>
+        <div class="project-card">
+          <div>
+            <span class="project-tag">Integration / Platform Experiment</span>
+            <h3 class="project-title">Zoom Integration Experiment</h3>
+            <p class="project-desc">Rapid prototyping of third-party integrations and API experimentation. Built to understand API capabilities and product opportunities.</p>
+          </div>
+          <a href="https://github.com/vaibhav-bestpm/Zoom-integration-exp" target="_blank" class="link-btn">→ View GitHub Repo</a>
+        </div>
+        <div class="project-card">
+          <div>
+            <span class="project-tag">Product Concept & Architecture</span>
+            <h3 class="project-title">Tithiya</h3>
+            <p class="project-desc">Architecture exploration for a platform addressing specific market needs. Deep focus on UX design, user workflows, and technical scalability.</p>
+          </div>
+          <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 700;">Private Repository (Concept Stage)</span>
+        </div>
       </div>
 
-      <div class="project-card">
-        <div class="project-role">GenAI / LLM Experimentation</div>
-        <h3 class="project-name">LoRA Scripts</h3>
-        <p class="about-narrative">Experimental work in fine-tuning and optimization of LLMs using Low-Rank Adaptation (LoRA). Critical R&D for AI-first product strategies.</p>
-        <a href="https://github.com/vaibhav-bestpm/used-lora-scripts" target="_blank" class="artifact-link">→ GitHub Repo</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-role">Integration / Platform Experiment</div>
-        <h3 class="project-name">Zoom Integration Experiment</h3>
-        <p class="about-narrative">Rapid prototyping of third-party integrations and API experimentation. Built to understand API capabilities and product opportunities.</p>
-        <a href="https://github.com/vaibhav-bestpm/Zoom-integration-exp" target="_blank" class="artifact-link">→ GitHub Repo</a>
-      </div>
-
-      <div class="project-card">
-        <div class="project-role">Product Concept & Architecture</div>
-        <h3 class="project-name">Tithiya</h3>
-        <p class="about-narrative">Architecture exploration for a platform addressing specific market needs. Deep focus on UX design, user workflows, and technical scalability.</p>
-        <span class="highlight-description">Private Repository (Concept Stage)</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="design" id="ux">
-    <div class="section-container">
-      <h2 class="section-title">Product & UX Work</h2>
+      <h2 class="section-title" style="margin-top: 6rem;">Product & UX Work (Figma)</h2>
       <div class="design-grid">
-        <div class="design-card"><h3 class="project-name" style="font-size:1.1rem;">GenAI Mockups</h3><a href="https://www.figma.com/design/V7wNDVOBzHrFXfDDAoUw3y/Generative-AI-MockUps" target="_blank" class="design-link">→ View Figma</a></div>
-        <div class="design-card"><h3 class="project-name" style="font-size:1.1rem;">Care Navigator Portal (v1)</h3><a href="https://www.figma.com/design/42TJPkymRs7yNCNNxDQJy9/Care-Navigator-Portal-Working-File" target="_blank" class="design-link">→ View Figma</a></div>
-        <div class="design-card"><h3 class="project-name" style="font-size:1.1rem;">Care Navigator Portal (v2)</h3><a href="https://www.figma.com/design/GeFLY9yeMpRLvAEIXsLDaN/Care-Navigator-Portal-Working-File-2" target="_blank" class="design-link">→ View Figma</a></div>
-        <div class="design-card"><h3 class="project-name" style="font-size:1.1rem;">Influencer App</h3><a href="https://www.figma.com/design/PaOE2aZgSlPgz034xNt2mO/Influencer-App" target="_blank" class="design-link">→ View Figma</a></div>
-        <div class="design-card"><h3 class="project-name" style="font-size:1.1rem;">Mindbridge App Concept</h3><a href="https://www.figma.com/design/fFvP7yc5gXJGYT18E0ZCGy/mindbridge-app-concept" target="_blank" class="design-link">→ View Figma</a></div>
-        <div class="design-card"><h3 class="project-name" style="font-size:1.1rem;">DSP Screens</h3><a href="https://www.figma.com/design/GDw5xRtX6rRZ6vIMmSz8n6/DSP-screens" target="_blank" class="design-link">→ View Figma</a></div>
-        <div class="design-card"><h3 class="project-name" style="font-size:1.1rem;">Smartfluence Screens</h3><a href="https://www.figma.com/design/SmlFdaFbzOyQekZNQSDGta/Smartfluence-Brand---Content-Creator-Screens" target="_blank" class="design-link">→ View Figma</a></div>
+        <div class="design-card"><h4>GenAI Mockups</h4><a href="https://www.figma.com/design/V7wNDVOBzHrFXfDDAoUw3y/Generative-AI-MockUps" target="_blank" class="link-btn">View Figma</a></div>
+        <div class="design-card"><h4>Care Navigator Portal (v1)</h4><a href="https://www.figma.com/design/42TJPkymRs7yNCNNxDQJy9/Care-Navigator-Portal-Working-File" target="_blank" class="link-btn">View Figma</a></div>
+        <div class="design-card"><h4>Care Navigator Portal (v2)</h4><a href="https://www.figma.com/design/GeFLY9yeMpRLvAEIXsLDaN/Care-Navigator-Portal-Working-File-2" target="_blank" class="link-btn">View Figma</a></div>
+        <div class="design-card"><h4>Influencer App</h4><a href="https://www.figma.com/design/PaOE2aZgSlPgz034xNt2mO/Influencer-App" target="_blank" class="link-btn">View Figma</a></div>
+        <div class="design-card"><h4>Mindbridge App Concept</h4><a href="https://www.figma.com/design/fFvP7yc5gXJGYT18E0ZCGy/mindbridge-app-concept" target="_blank" class="link-btn">View Figma</a></div>
+        <div class="design-card"><h4>DSP Screens</h4><a href="https://www.figma.com/design/GDw5xRtX6rRZ6vIMmSz8n6/DSP-screens" target="_blank" class="link-btn">View Figma</a></div>
+        <div class="design-card"><h4>Smartfluence Screens</h4><a href="https://www.figma.com/design/SmlFdaFbzOyQekZNQSDGta/Smartfluence-Brand---Content-Creator-Screens" target="_blank" class="link-btn">View Figma</a></div>
       </div>
     </div>
   </section>
 
-  <section class="skills" id="skills" style="background-color: var(--color-bg-secondary);">
+  <section id="skills">
     <div class="section-container">
       <h2 class="section-title">Skills & Tooling</h2>
-      <div class="skills-grid">
-        <div class="skill-category"><div class="skill-category-title">Leadership</div><div class="skill-items">Roadmaps, Multi-product Ownership, OKRs, GTM, User Research.</div></div>
-        <div class="skill-category"><div class="skill-category-title">AI & GenAI</div><div class="skill-items">LLMs, RAG, Prompt Engineering, Model Fine-tuning, Python.</div></div>
-        <div class="skill-category"><div class="skill-category-title">Growth</div><div class="skill-items">A/B Testing, Retention Funnels, Experimentation, Growth Metrics.</div></div>
-        <div class="skill-category"><div class="skill-category-title">Analytics</div><div class="skill-items">Mixpanel, Amplitude, SQL, GA4, Segment, Jira, Figma.</div></div>
+      <div class="skills-section">
+        <div><h4 class="skill-title">Leadership</h4><p class="skill-list">Roadmaps, Multi-product Ownership, OKRs, GTM, User Research.</p></div>
+        <div><h4 class="skill-title">AI & GenAI</h4><p class="skill-list">LLMs, RAG, Prompt Engineering, Model Fine-tuning, Python.</p></div>
+        <div><h4 class="skill-title">Growth</h4><p class="skill-list">A/B Testing, Retention Funnels, Experimentation, Growth Metrics.</p></div>
+        <div><h4 class="skill-title">Analytics</h4><p class="skill-list">Mixpanel, Amplitude, SQL, GA4, Segment, Jira, Figma.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="experience" id="experience">
+  <section id="experience" style="background: #f1f5f9;">
     <div class="section-container">
-      <h2 class="section-title">Experience</h2>
-      <div class="experience-item">
-        <div class="experience-header"><div><div class="experience-role">Product Head</div><div class="experience-company">KnowledgeCity</div></div><p class="highlight-description">Present</p></div>
-        <p class="about-narrative">Drove product strategy for AI e-learning. Increased ARPU 500% through feature optimization. Leading multi-product GenAI roadmap.</p>
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="exp-item">
+        <div><h3>Product Head</h3><span class="exp-company">KnowledgeCity</span><p>Leading multi-product GenAI roadmap and achieved 500% ARPU increase.</p></div>
+        <span class="exp-date">Present</span>
       </div>
-      <div class="experience-item">
-        <div class="experience-header"><div><div class="experience-role">Group Product Manager</div><div class="experience-company">CareCentra</div></div><p class="highlight-description">Previous</p></div>
-        <p class="about-narrative">Owned product strategy for Smartfluence & MyMobeMap. Achieved 120% WAU growth through rapid innovation.</p>
+      <div class="exp-item">
+        <div><h3>Group Product Manager</h3><span class="exp-company">CareCentra</span><p>Owned product strategy for Smartfluence & MyMobeMap. Achieved 120% WAU growth.</p></div>
+        <span class="exp-date">Previous</span>
       </div>
-      <div class="experience-item">
-        <div class="experience-header"><div><div class="experience-role">Product & Marketing Head</div><div class="experience-company">DBMCI / eGurukul</div></div><p class="highlight-description">Earlier</p></div>
-        <p class="about-narrative">Built product strategy and GTM for EdTech platform. Scaled user base by 3.5x.</p>
+      <div class="exp-item">
+        <div><h3>Product & Marketing Head</h3><span class="exp-company">DBMCI / eGurukul</span><p>Scaled EdTech user base by 3.5x.</p></div>
+        <span class="exp-date">Earlier</span>
       </div>
-      <div class="experience-item">
-        <div class="experience-header"><div><div class="experience-role">Founder & Product Lead</div><div class="experience-company">Mark N Comm PR</div></div><p class="highlight-description">Entrepreneurial</p></div>
-        <p class="about-narrative">Founded and scaled a PR platform from zero. Led product discovery, MVP development, and scaling.</p>
+      <div class="exp-item">
+        <div><h3>Founder & Product Lead</h3><span class="exp-company">Mark N Comm PR</span><p>Founded and scaled a PR platform from zero.</p></div>
+        <span class="exp-date">Entrepreneurial</span>
       </div>
-      <div class="experience-item">
-        <div class="experience-header"><div><div class="experience-role">Product Manager</div><div class="experience-company">Classteacher</div></div><p class="highlight-description">Foundational</p></div>
-        <p class="about-narrative">Started career building educational tools. Developed deep foundation in user research and cross-functional execution.</p>
+      <div class="exp-item">
+        <div><h3>Product Manager</h3><span class="exp-company">Classteacher</span><p>Foundational role building educational tools and leading user research.</p></div>
+        <span class="exp-date">Foundational</span>
       </div>
     </div>
   </section>
 
-  <section class="certifications" id="certifications" style="background-color: var(--color-bg-secondary);">
+  <section id="certifications">
     <div class="section-container">
       <h2 class="section-title">Professional Certifications</h2>
       <div class="cert-grid">
-        <div class="cert-card">
-          <div class="cert-title">AI Product Management (Professional Certificate)</div>
-          <div class="cert-issuer">Duke University</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">AI Product Manager (Professional Certificate)</div>
-          <div class="cert-issuer">Microsoft</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">AI Product Manager (Professional Certificate)</div>
-          <div class="cert-issuer">IBM</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Digital Product Management</div>
-          <div class="cert-issuer">University of Virginia</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Six Sigma Yellow Belt | Lean Six Sigma White Belt</div>
-          <div class="cert-issuer">Professional Certification</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">Machine Learning & Deep Learning with Python & R</div>
-          <div class="cert-issuer">Udemy</div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-title">SQL for Data Analysis</div>
-          <div class="cert-issuer">Udemy</div>
-        </div>
+        <div class="cert-card"><p>AI Product Management</p><span class="cert-issuer">Duke University</span></div>
+        <div class="cert-card"><p>AI Product Manager</p><span class="cert-issuer">Microsoft</span></div>
+        <div class="cert-card"><p>AI Product Manager</p><span class="cert-issuer">IBM</span></div>
+        <div class="cert-card"><p>Digital Product Management</p><span class="cert-issuer">University of Virginia</span></div>
+        <div class="cert-card"><p>Six Sigma Yellow / White Belt</p><span class="cert-issuer">Professional</span></div>
+        <div class="cert-card"><p>Machine Learning / Deep Learning</p><span class="cert-issuer">Udemy</span></div>
+        <div class="cert-card"><p>SQL for Data Analysis</p><span class="cert-issuer">Udemy</span></div>
       </div>
-      <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--color-accent); font-weight: 500;">
-        Currently completing a series of 10 micro-certifications in AI & Product Strategy.
-      </p>
     </div>
   </section>
 
-  <section class="contact" id="contact">
+  <section id="contact">
     <div class="section-container">
-      <h2 class="section-title">Let's build something meaningful</h2>
-      <a href="mailto:vaibhav.vats.branding@gmail.com" class="contact-link">✉ vaibhav.vats.branding@gmail.com</a>
-      <a href="https://www.linkedin.com/in/vaibhavprodman" target="_blank" class="contact-link">💼 LinkedIn Profile</a>
+      <h2 class="contact-big">Let's build something meaningful</h2>
+      <div class="btn-group">
+        <a href="mailto:vaibhav.vats.branding@gmail.com" class="btn btn-primary">✉ Email Me</a>
+        <a href="tel:+919818852212" class="btn btn-secondary" style="border-color: var(--color-accent); color: var(--color-accent);">📞 Call Me</a>
+        <a href="https://www.linkedin.com/in/vaibhavprodman" target="_blank" class="btn btn-linkedin">💼 LinkedIn Profile</a>
+        <a href="https://wa.link/vfj7zc" target="_blank" class="btn btn-whatsapp">📱 Whatsapp Me</a>
+      </div>
     </div>
   </section>
 
-  <footer><p>&copy; 2026 Vaibhav Vats. All rights reserved. 13+ Years of Excellence.</p></footer>
+  <footer><p>&copy; 2026 Vaibhav Vats</p></footer>
 
 </body>
 </html>
