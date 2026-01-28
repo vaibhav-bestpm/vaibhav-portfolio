@@ -11,98 +11,86 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --color-bg: #f8fafc;
-      --color-card: #ffffff;
+      --color-bg: #ffffff;
       --color-text: #0f172a;
       --color-text-muted: #475569;
-      --color-accent: #4f46e5;
+      --color-accent: #000000;
+      --color-indigo: #4f46e5;
       --color-border: #e2e8f0;
-      --color-whatsapp: #25D366;
-      --color-linkedin: #0077b5;
       --max-width: 1100px;
     }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 
     /* NAVIGATION */
-    nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); padding: 1.2rem 0; }
+    nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); padding: 1.2rem 0; }
     .nav-container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-    .nav-logo { font-weight: 800; font-size: 1.1rem; color: var(--color-text); letter-spacing: -0.5px; }
-    .nav-links { display: flex; list-style: none; gap: 1.5rem; }
+    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
+    .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
     .nav-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.8rem; font-weight: 700; transition: 0.3s; text-transform: uppercase; }
-    .nav-links a:hover { color: var(--color-accent); }
+    .nav-links a:hover { color: var(--color-indigo); }
+    .nav-links li:last-child a { background: var(--color-accent); color: #fff !important; padding: 0.6rem 1.4rem; border-radius: 50px; }
 
-    /* HERO */
-    .hero { min-height: 75vh; display: flex; align-items: center; padding: 4rem 2rem; background: radial-gradient(circle at top right, #eef2ff 0%, #f8fafc 50%); }
-    .hero-content { max-width: 850px; margin: 0 auto; text-align: center; }
-    .hero-image { width: 140px; height: 140px; border-radius: 32px; object-fit: cover; margin-bottom: 2rem; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 4px solid white; }
-    .hero-name { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; letter-spacing: -2px; margin-bottom: 1rem; line-height: 1.1; color: #1e293b; }
-    .hero-positioning { font-size: 1.3rem; color: var(--color-accent); font-weight: 700; margin-bottom: 1.5rem; }
-    .hero-proposition { font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 2.5rem; max-width: 650px; margin-left: auto; margin-right: auto; }
+    /* HERO - Fixed Centering */
+    .hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem; }
+    .hero-container { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 900px; }
+    .badge { display: inline-flex; align-items: center; gap: 0.6rem; background: #f0fdf4; color: #166534; padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 2rem; border: 1px solid #dcfce7; }
+    .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
+
+    .hero-image { width: 140px; height: 140px; border-radius: 32px; object-fit: cover; margin-bottom: 2rem; border: 4px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .hero-name { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800; letter-spacing: -2.5px; line-height: 1.1; margin-bottom: 1.5rem; color: #1e293b; }
+    .hero-proposition { font-size: 1.2rem; color: var(--color-text-muted); max-width: 700px; margin: 0 auto 3rem; font-weight: 500; }
 
     .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn { padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 700; border-radius: 12px; text-decoration: none; transition: 0.3s; display: inline-flex; align-items: center; gap: 0.6rem; }
+    .btn { padding: 1rem 2.5rem; font-size: 0.95rem; font-weight: 700; border-radius: 50px; text-decoration: none; transition: 0.3s; display: inline-flex; align-items: center; gap: 0.6rem; }
     .btn-primary { background: var(--color-accent); color: white; }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
     .btn-secondary { background: white; color: var(--color-text); border: 1px solid var(--color-border); }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2); }
 
-    /* CREDIBILITY STRIP (AS PER SCREENSHOT) */
-    .credibility { background: #0a0e27; padding: 4rem 2rem; color: white; }
+    /* IMPACT STRIP - Screenshots Match */
+    .credibility { background: #0a0e27; padding: 5rem 2rem; color: white; }
     .credibility-content { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; text-align: center; }
-    .credibility-item span { display: block; color: #6366f1; font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .credibility-item p { font-size: 0.85rem; font-weight: 600; color: #b0b8c8; }
+    .credibility-item span { display: block; color: #818cf8; font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .credibility-item p { font-size: 0.8rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; }
 
     /* SECTIONS */
-    section { padding: 8rem 0; }
+    section { padding: 9rem 0; }
     .section-container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
-    .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 3.5rem; color: #1e293b; letter-spacing: -1px; }
+    .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 4rem; letter-spacing: -1.5px; }
 
-    /* ABOUT IMPACT CARDS */
-    .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3.5rem; }
-    .metric-card { background: white; padding: 2.5rem 2rem; border-radius: 24px; border: 1px solid var(--color-border); }
-    .metric-num { display: block; font-size: 2rem; font-weight: 800; color: var(--color-accent); margin-bottom: 0.5rem; }
-    .metric-title { font-size: 1rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .metric-label { font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); line-height: 1.5; }
+    /* ABOUT & IMPACT */
+    .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
+    .metric-card { background: white; padding: 3rem 2rem; border-radius: 28px; border: 1px solid var(--color-border); transition: 0.3s; }
+    .metric-num { display: block; font-size: 2.2rem; font-weight: 800; color: var(--color-indigo); margin-bottom: 0.5rem; }
 
-    /* WORK GRID */
+    /* WORK GRIDS */
     .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-    .project-card { background: white; border: 1px solid var(--color-border); border-radius: 24px; padding: 2.5rem; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
-    .project-card:hover { transform: translateY(-8px); border-color: var(--color-accent); box-shadow: 0 30px 60px rgba(0,0,0,0.06); }
-    .project-tag { font-size: 0.75rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 1.2rem; display: block; }
-    .project-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.2rem; }
-    .project-desc { font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2.5rem; }
-    .link-btn { font-size: 0.9rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-accent); padding-bottom: 2px; }
+    .project-card { background: white; border: 1px solid var(--color-border); border-radius: 32px; padding: 3rem; transition: 0.4s; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+    .project-card:hover { border-color: var(--color-indigo); transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
 
-    /* DESIGN GALLERY */
-    .design-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
-    .design-card { background: white; border: 1px solid var(--color-border); border-radius: 16px; padding: 1.8rem; transition: 0.3s; }
-    .design-card:hover { border-color: var(--color-accent); }
+    .design-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .design-card { background: white; border: 1px solid var(--color-border); border-radius: 20px; padding: 2rem; transition: 0.3s; }
+    .design-card:hover { border-color: var(--color-indigo); transform: translateY(-5px); }
 
-    /* EXPERIENCE */
-    .exp-item { padding: 2.5rem; background: white; border-radius: 24px; border: 1px solid var(--color-border); margin-bottom: 1.5rem; display: flex; justify-content: space-between; }
-    .exp-company { color: var(--color-accent); font-weight: 700; font-size: 1.05rem; margin-bottom: 0.8rem; display: block; }
-    .exp-date { font-size: 0.85rem; font-weight: 700; color: var(--color-text-muted); background: #f1f5f9; padding: 0.4rem 0.8rem; border-radius: 8px; align-self: flex-start; }
+    /* EXPERIENCE - Fixed Bubble Layout */
+    .exp-item { background: white; border: 1px solid var(--color-border); padding: 3rem; border-radius: 32px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+    .exp-info { flex: 1; }
+    .exp-info h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
+    .exp-company { color: var(--color-indigo); font-weight: 800; font-size: 1rem; margin-bottom: 0.5rem; display: block; }
+    .exp-bubble { min-width: 100px; height: 100px; background: #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: var(--color-text-muted); text-align: center; padding: 10px; flex-shrink: 0; }
 
-    /* SKILLS */
+    /* SKILLS & CERTS */
     .skills-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; }
-    .skill-title { font-size: 0.85rem; font-weight: 800; color: var(--color-accent); text-transform: uppercase; margin-bottom: 1.2rem; }
-    .skill-list { color: var(--color-text-muted); font-size: 0.95rem; font-weight: 500; }
-
-    /* CERTIFICATIONS */
+    .skill-title { font-size: 0.85rem; font-weight: 800; color: var(--color-indigo); text-transform: uppercase; margin-bottom: 1.2rem; }
     .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
     .cert-card { padding: 1.5rem; background: white; border: 1px solid var(--color-border); border-radius: 12px; }
-    .cert-issuer { color: var(--color-accent); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem; }
 
-    /* CONTACT */
-    .contact { text-align: center; padding: 10rem 0; background: white; }
-    .contact-big { font-size: 3rem; font-weight: 800; margin-bottom: 2.5rem; }
-    .btn-whatsapp { background: var(--color-whatsapp); color: white; }
-    .btn-linkedin { background: var(--color-linkedin); color: white; }
-    footer { padding: 4rem; text-align: center; color: var(--color-text-muted); font-size: 0.9rem; border-top: 1px solid var(--color-border); }
+    footer { padding: 4rem; text-align: center; border-top: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-muted); }
 
     @media (max-width: 900px) {
-      .credibility-content, .metrics-grid, .work-grid { grid-template-columns: 1fr; }
-      .exp-item { flex-direction: column; gap: 1rem; }
+      .credibility-content, .metrics-grid, .work-grid, .design-grid, .skills-section { grid-template-columns: 1fr; }
+      .exp-item { flex-direction: column-reverse; text-align: center; }
       .nav-links { display: none; }
     }
   </style>
@@ -118,22 +106,20 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Let's Talk</a></li>
       </ul>
     </div>
   </nav>
 
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero-container">
+      <div class="badge"><div class="dot"></div> Available for Product Leadership / Director Roles</div>
       <img src="profile.jpg" alt="Vaibhav Vats" class="hero-image">
-      <h1 class="hero-name">Vaibhav Vats</h1>
-      <p class="hero-positioning">Product Leader | GenAI-First | SaaS, MarTech & HealthTech</p>
-      <p class="hero-proposition">
-        Product leader with 13+ years of end-to-end product ownership building and scaling AI-driven SaaS products across India and US markets.
-      </p>
+      <h1 class="hero-name">I build AI-powered products<br>that scale users and revenue.</h1>
+      <p class="hero-proposition">Vaibhav Vats | Product Leader with 13+ years of experience scaling AI-driven SaaS products across India and US markets.</p>
       <div class="btn-group">
         <a href="#work" class="btn btn-primary">View Selected Work</a>
-        <a href="resume.pdf" download class="btn btn-secondary">Download CV</a>
+        <a href="resume.pdf" download class="btn btn-secondary">Download Resume ↓</a>
       </div>
     </div>
   </section>
@@ -142,39 +128,23 @@
     <div class="credibility-content">
       <div class="credibility-item"><span>13+</span><p>Years Experience</p></div>
       <div class="credibility-item"><span>7+</span><p>Product Leadership</p></div>
-      <div class="credibility-item"><span>GenAI & LLMs</span><p>AI Innovation</p></div>
-      <div class="credibility-item"><span>SaaS, MarTech, HealthTech</span><p>Domain Expertise</p></div>
-      <div class="credibility-item"><span>India & US Markets</span><p>Global Experience</p></div>
+      <div class="credibility-item"><span>GenAI</span><p>AI Innovation</p></div>
+      <div class="credibility-item"><span>SaaS/Health</span><p>Domain Expertise</p></div>
+      <div class="credibility-item"><span>Global</span><p>India & US Markets</p></div>
     </div>
   </div>
 
   <section id="about">
     <div class="section-container">
       <h2 class="section-title">About & Strategic Impact</h2>
-      <p style="font-size: 1.15rem; color: var(--color-text-muted); max-width: 900px;">
-        I'm a product leader obsessed with leveraging generative AI to solve complex, real-world problems. With 13+ years in technology and 7+ years driving product strategy at scale, I combine strong product thinking with technical depth and a relentless focus on customer value.
+      <p style="font-size: 1.15rem; color: var(--color-text-muted); max-width: 900px; margin-bottom: 4rem;">
+        I'm a product leader obsessed with leveraging generative AI to solve complex, real-world problems. With 13+ years in technology and 7+ years driving product strategy at scale, I combine strong product thinking with technical depth.
       </p>
-      
       <div class="metrics-grid">
-        <div class="metric-card">
-          <span class="metric-num">4–5×</span>
-          <h4 class="metric-title">Product Impact</h4>
-          <p class="metric-label">ARPU uplift driven by pricing, packaging, and feature-led monetization across products.</p>
-        </div>
-        <div class="metric-card">
-          <span class="metric-num">+30–40%</span>
-          <h4 class="metric-title">Growth & Retention</h4>
-          <p class="metric-label">Improvement in retention & engagement through onboarding and optimization.</p>
-        </div>
-        <div class="metric-card">
-          <span class="metric-num">3×+</span>
-          <h4 class="metric-title">Scale & Ownership</h4>
-          <p class="metric-label">Active users scaled across SaaS platforms in India & US markets.</p>
-        </div>
+        <div class="metric-card"><span class="metric-num">4–5×</span><h4 class="metric-title">Product Impact</h4><p class="metric-label">ARPU uplift driven by pricing, packaging, and monetization.</p></div>
+        <div class="metric-card"><span class="metric-num">+30–40%</span><h4 class="metric-title">Growth & Retention</h4><p class="metric-label">Improvement in engagement through onboarding optimization.</p></div>
+        <div class="metric-card"><span class="metric-num">3×+</span><h4 class="metric-title">Scale & Ownership</h4><p class="metric-label">Active users scaled across India & US SaaS platforms.</p></div>
       </div>
-      <p style="margin-top: 2rem; font-size: 0.85rem; color: var(--color-text-muted); font-style: italic;">
-        Metrics measured across full product lifecycles (6–12 months).
-      </p>
     </div>
   </section>
 
@@ -182,49 +152,21 @@
     <div class="section-container">
       <h2 class="section-title">Selected Work (Technical)</h2>
       <div class="work-grid">
-        <div class="project-card">
-          <div>
-            <span class="project-tag">AI-Driven Application</span>
-            <h3 class="project-title">AstroVoyager</h3>
-            <p class="project-desc">AI-powered exploration platform leveraging LLMs. Full-stack product thinking from technical architecture to shipping scalable AI-first experiences.</p>
-          </div>
-          <a href="https://github.com/vaibhav-bestpm/astrovoyager" target="_blank" class="link-btn">→ View GitHub Repo</a>
-        </div>
-        <div class="project-card">
-          <div>
-            <span class="project-tag">GenAI / LLM Experimentation</span>
-            <h3 class="project-title">LoRA Scripts</h3>
-            <p class="project-desc">Experimental work in fine-tuning and optimization of LLMs using Low-Rank Adaptation (LoRA). Critical R&D for AI-first product strategies.</p>
-          </div>
-          <a href="https://github.com/vaibhav-bestpm/used-lora-scripts" target="_blank" class="link-btn">→ View GitHub Repo</a>
-        </div>
-        <div class="project-card">
-          <div>
-            <span class="project-tag">Integration / Platform Experiment</span>
-            <h3 class="project-title">Zoom Integration Experiment</h3>
-            <p class="project-desc">Rapid prototyping of third-party integrations and API experimentation. Built to understand API capabilities and product opportunities.</p>
-          </div>
-          <a href="https://github.com/vaibhav-bestpm/Zoom-integration-exp" target="_blank" class="link-btn">→ View GitHub Repo</a>
-        </div>
-        <div class="project-card">
-          <div>
-            <span class="project-tag">Product Concept & Architecture</span>
-            <h3 class="project-title">Tithiya</h3>
-            <p class="project-desc">Architecture exploration for a platform addressing specific market needs. Deep focus on UX design, user workflows, and technical scalability.</p>
-          </div>
-          <span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 700;">Private Repository (Concept Stage)</span>
-        </div>
+        <div class="project-card"><div><span style="color: var(--color-indigo); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 1rem;">AI-Driven Application</span><h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">AstroVoyager</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem;">AI-powered exploration platform leveraging LLMs for scalable experiences.</p></div><a href="https://github.com/vaibhav-bestpm/astrovoyager" target="_blank" style="font-size: 0.9rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo); padding-bottom: 3px;">→ View GitHub Repo</a></div>
+        <div class="project-card"><div><span style="color: var(--color-indigo); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 1rem;">LLM Experimentation</span><h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">LoRA Scripts</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem;">Experimental work in fine-tuning and optimization of LLMs using LoRA.</p></div><a href="https://github.com/vaibhav-bestpm/used-lora-scripts" target="_blank" style="font-size: 0.9rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo); padding-bottom: 3px;">→ View GitHub Repo</a></div>
+        <div class="project-card"><div><span style="color: var(--color-indigo); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 1rem;">Integration</span><h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">Zoom Integration</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem;">Rapid prototyping of third-party integrations and API experimentation.</p></div><a href="https://github.com/vaibhav-bestpm/Zoom-integration-exp" target="_blank" style="font-size: 0.9rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo); padding-bottom: 3px;">→ View GitHub Repo</a></div>
+        <div class="project-card"><div><span style="color: var(--color-indigo); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 1rem;">Product Concept</span><h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">Tithiya</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem;">Deep focus on UX design, user workflows, and technical scalability.</p></div><span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 700;">Private Repository (Concept)</span></div>
       </div>
 
       <h2 class="section-title" style="margin-top: 6rem;">Product & UX Work (Figma)</h2>
       <div class="design-grid">
-        <div class="design-card"><h4>GenAI Mockups</h4><a href="https://www.figma.com/design/V7wNDVOBzHrFXfDDAoUw3y/Generative-AI-MockUps" target="_blank" class="link-btn">View Figma</a></div>
-        <div class="design-card"><h4>Care Navigator Portal (v1)</h4><a href="https://www.figma.com/design/42TJPkymRs7yNCNNxDQJy9/Care-Navigator-Portal-Working-File" target="_blank" class="link-btn">View Figma</a></div>
-        <div class="design-card"><h4>Care Navigator Portal (v2)</h4><a href="https://www.figma.com/design/GeFLY9yeMpRLvAEIXsLDaN/Care-Navigator-Portal-Working-File-2" target="_blank" class="link-btn">View Figma</a></div>
-        <div class="design-card"><h4>Influencer App</h4><a href="https://www.figma.com/design/PaOE2aZgSlPgz034xNt2mO/Influencer-App" target="_blank" class="link-btn">View Figma</a></div>
-        <div class="design-card"><h4>Mindbridge App Concept</h4><a href="https://www.figma.com/design/fFvP7yc5gXJGYT18E0ZCGy/mindbridge-app-concept" target="_blank" class="link-btn">View Figma</a></div>
-        <div class="design-card"><h4>DSP Screens</h4><a href="https://www.figma.com/design/GDw5xRtX6rRZ6vIMmSz8n6/DSP-screens" target="_blank" class="link-btn">View Figma</a></div>
-        <div class="design-card"><h4>Smartfluence Screens</h4><a href="https://www.figma.com/design/SmlFdaFbzOyQekZNQSDGta/Smartfluence-Brand---Content-Creator-Screens" target="_blank" class="link-btn">View Figma</a></div>
+        <div class="design-card"><h4>GenAI Mockups</h4><a href="https://www.figma.com/design/V7wNDVOBzHrFXfDDAoUw3y/Generative-AI-MockUps" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
+        <div class="design-card"><h4>Care Navigator v1</h4><a href="https://www.figma.com/design/42TJPkymRs7yNCNNxDQJy9/Care-Navigator-Portal-Working-File" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
+        <div class="design-card"><h4>Care Navigator v2</h4><a href="https://www.figma.com/design/GeFLY9yeMpRLvAEIXsLDaN/Care-Navigator-Portal-Working-File-2" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
+        <div class="design-card"><h4>Influencer App</h4><a href="https://www.figma.com/design/PaOE2aZgSlPgz034xNt2mO/Influencer-App" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
+        <div class="design-card"><h4>Mindbridge</h4><a href="https://www.figma.com/design/fFvP7yc5gXJGYT18E0ZCGy/mindbridge-app-concept" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
+        <div class="design-card"><h4>DSP Screens</h4><a href="https://www.figma.com/design/GDw5xRtX6rRZ6vIMmSz8n6/DSP-screens" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
+        <div class="design-card"><h4>Smartfluence</h4><a href="https://www.figma.com/design/SmlFdaFbzOyQekZNQSDGta/Smartfluence-Brand---Content-Creator-Screens" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
       </div>
     </div>
   </section>
@@ -233,10 +175,10 @@
     <div class="section-container">
       <h2 class="section-title">Skills & Tooling</h2>
       <div class="skills-section">
-        <div><h4 class="skill-title">Leadership</h4><p class="skill-list">Roadmaps, Multi-product Ownership, OKRs, GTM, User Research.</p></div>
-        <div><h4 class="skill-title">AI & GenAI</h4><p class="skill-list">LLMs, RAG, Prompt Engineering, Model Fine-tuning, Python.</p></div>
-        <div><h4 class="skill-title">Growth</h4><p class="skill-list">A/B Testing, Retention Funnels, Experimentation, Growth Metrics.</p></div>
-        <div><h4 class="skill-title">Analytics</h4><p class="skill-list">Mixpanel, Amplitude, SQL, GA4, Segment, Jira, Figma.</p></div>
+        <div><h4 class="skill-title">Leadership</h4><p style="color: var(--color-text-muted); font-size: 0.95rem; font-weight: 600;">Roadmaps, Multi-product Ownership, OKRs, GTM, User Research.</p></div>
+        <div><h4 class="skill-title">AI & GenAI</h4><p style="color: var(--color-text-muted); font-size: 0.95rem; font-weight: 600;">LLMs, RAG, Prompt Engineering, Model Fine-tuning, Python.</p></div>
+        <div><h4 class="skill-title">Growth</h4><p style="color: var(--color-text-muted); font-size: 0.95rem; font-weight: 600;">A/B Testing, Retention Funnels, Experimentation, Growth Metrics.</p></div>
+        <div><h4 class="skill-title">Analytics</h4><p style="color: var(--color-text-muted); font-size: 0.95rem; font-weight: 600;">Mixpanel, Amplitude, SQL, GA4, Segment, Jira, Figma.</p></div>
       </div>
     </div>
   </section>
@@ -244,57 +186,42 @@
   <section id="experience" style="background: #f1f5f9;">
     <div class="section-container">
       <h2 class="section-title">Professional Experience</h2>
-      <div class="exp-item">
-        <div><h3>Product Head</h3><span class="exp-company">KnowledgeCity</span><p>Leading multi-product GenAI roadmap and achieved 500% ARPU increase.</p></div>
-        <span class="exp-date">Present</span>
-      </div>
-      <div class="exp-item">
-        <div><h3>Group Product Manager</h3><span class="exp-company">CareCentra</span><p>Owned product strategy for Smartfluence & MyMobeMap. Achieved 120% WAU growth.</p></div>
-        <span class="exp-date">Previous</span>
-      </div>
-      <div class="exp-item">
-        <div><h3>Product & Marketing Head</h3><span class="exp-company">DBMCI / eGurukul</span><p>Scaled EdTech user base by 3.5x.</p></div>
-        <span class="exp-date">Earlier</span>
-      </div>
-      <div class="exp-item">
-        <div><h3>Founder & Product Lead</h3><span class="exp-company">Mark N Comm PR</span><p>Founded and scaled a PR platform from zero.</p></div>
-        <span class="exp-date">Entrepreneurial</span>
-      </div>
-      <div class="exp-item">
-        <div><h3>Product Manager</h3><span class="exp-company">Classteacher</span><p>Foundational role building educational tools and leading user research.</p></div>
-        <span class="exp-date">Foundational</span>
-      </div>
+      <div class="exp-item"><div class="exp-info"><span class="exp-company">KnowledgeCity</span><h3>Product Head</h3><p>Leading multi-product GenAI roadmap and achieved 500% ARPU increase.</p></div><div class="exp-bubble">Present</div></div>
+      <div class="exp-item"><div class="exp-info"><span class="exp-company">CareCentra</span><h3>Group Product Manager</h3><p>Strategy for Smartfluence & MyMobeMap. 120% WAU growth.</p></div><div class="exp-bubble">Previous</div></div>
+      <div class="exp-item"><div class="exp-info"><span class="exp-company">DBMCI / eGurukul</span><h3>Product Head</h3><p>Scaled EdTech user base by 3.5x.</p></div><div class="exp-bubble">Earlier</div></div>
+      <div class="exp-item"><div class="exp-info"><span class="exp-company">Mark N Comm PR</span><h3>Founder & Product Lead</h3><p>Founded and scaled a PR platform from zero.</p></div><div class="exp-bubble">Entrepreneurial</div></div>
+      <div class="exp-item"><div class="exp-info"><span class="exp-company">Classteacher</span><h3>Product Manager</h3><p>Foundational role building educational tools.</p></div><div class="exp-bubble">Foundational</div></div>
     </div>
   </section>
 
   <section id="certifications">
     <div class="section-container">
-      <h2 class="section-title">Professional Certifications</h2>
+      <h2 class="section-title">Certifications</h2>
       <div class="cert-grid">
-        <div class="cert-card"><p>AI Product Management</p><span class="cert-issuer">Duke University</span></div>
-        <div class="cert-card"><p>AI Product Manager</p><span class="cert-issuer">Microsoft</span></div>
-        <div class="cert-card"><p>AI Product Manager</p><span class="cert-issuer">IBM</span></div>
-        <div class="cert-card"><p>Digital Product Management</p><span class="cert-issuer">University of Virginia</span></div>
-        <div class="cert-card"><p>Six Sigma Yellow / White Belt</p><span class="cert-issuer">Professional</span></div>
-        <div class="cert-card"><p>Machine Learning / Deep Learning</p><span class="cert-issuer">Udemy</span></div>
-        <div class="cert-card"><p>SQL for Data Analysis</p><span class="cert-issuer">Udemy</span></div>
+        <div class="cert-card"><p style="font-weight: 700;">AI Product Management</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Duke University</span></div>
+        <div class="cert-card"><p style="font-weight: 700;">AI Product Manager</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Microsoft</span></div>
+        <div class="cert-card"><p style="font-weight: 700;">AI Product Manager</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">IBM</span></div>
+        <div class="cert-card"><p style="font-weight: 700;">Digital Product Management</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">UVA</span></div>
+        <div class="cert-card"><p style="font-weight: 700;">Six Sigma Yellow Belt</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Professional</span></div>
+        <div class="cert-card"><p style="font-weight: 700;">Machine Learning</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Udemy</span></div>
+        <div class="cert-card"><p style="font-weight: 700;">SQL for Data Analysis</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Udemy</span></div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" style="text-align: center;">
     <div class="section-container">
-      <h2 class="contact-big">Let's build something meaningful</h2>
+      <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 3rem; letter-spacing: -2px;">Let's build something meaningful</h2>
       <div class="btn-group">
         <a href="mailto:vaibhav.vats.branding@gmail.com" class="btn btn-primary">✉ Email Me</a>
-        <a href="tel:+919818852212" class="btn btn-secondary" style="border-color: var(--color-accent); color: var(--color-accent);">📞 Call Me</a>
-        <a href="https://www.linkedin.com/in/vaibhavprodman" target="_blank" class="btn btn-linkedin">💼 LinkedIn Profile</a>
-        <a href="https://wa.link/vfj7zc" target="_blank" class="btn btn-whatsapp">📱 Whatsapp Me</a>
+        <a href="tel:+919818852212" class="btn btn-secondary" style="border: 1px solid var(--color-border); border-radius: 50px;">📞 Call Me</a>
+        <a href="https://www.linkedin.com/in/vaibhavprodman" target="_blank" class="btn btn-secondary" style="background: #0077b5; color: white; border: none; border-radius: 50px;">💼 LinkedIn</a>
+        <a href="https://wa.link/vfj7zc" target="_blank" class="btn btn-secondary" style="background: #25D366; color: white; border: none; border-radius: 50px;">📱 WhatsApp</a>
       </div>
+      <p style="margin-top: 2.5rem; font-weight: 700;">Direct: +91 98188 52212</p>
     </div>
   </section>
 
-  <footer><p>&copy; 2026 Vaibhav Vats</p></footer>
-
+  <footer><p>&copy; 2026 Vaibhav Vats. 13+ Years of Excellence.</p></footer>
 </body>
 </html>
