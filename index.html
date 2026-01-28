@@ -77,6 +77,12 @@
     .design-card:hover { border-color: var(--color-accent); }
     .design-link { color: var(--color-accent); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 
+    /* CERTIFICATIONS GRID */
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .cert-card { background-color: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; }
+    .cert-title { font-size: 1rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem; }
+    .cert-issuer { font-size: 0.85rem; color: var(--color-accent); font-weight: 600; text-transform: uppercase; }
+
     /* SKILLS GRID */
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
     .skill-category-title { font-size: 1rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; margin-bottom: 1rem; }
@@ -108,6 +114,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -252,6 +259,45 @@
         <div class="experience-header"><div><div class="experience-role">Product Manager</div><div class="experience-company">Classteacher</div></div><p class="highlight-description">Foundational</p></div>
         <p class="about-narrative">Started career building educational tools. Developed deep foundation in user research and cross-functional execution.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="certifications" id="certifications" style="background-color: var(--color-bg-secondary);">
+    <div class="section-container">
+      <h2 class="section-title">Professional Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-title">AI Product Management (Professional Certificate)</div>
+          <div class="cert-issuer">Duke University</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title">AI Product Manager (Professional Certificate)</div>
+          <div class="cert-issuer">Microsoft</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title">AI Product Manager (Professional Certificate)</div>
+          <div class="cert-issuer">IBM</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title">Digital Product Management</div>
+          <div class="cert-issuer">University of Virginia</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title">Six Sigma Yellow Belt | Lean Six Sigma White Belt</div>
+          <div class="cert-issuer">Professional Certification</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title">Machine Learning & Deep Learning with Python & R</div>
+          <div class="cert-issuer">Udemy</div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-title">SQL for Data Analysis</div>
+          <div class="cert-issuer">Udemy</div>
+        </div>
+      </div>
+      <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--color-accent); font-weight: 500;">
+        Currently completing a series of 10 micro-certifications in AI & Product Strategy.
+      </p>
     </div>
   </section>
 
