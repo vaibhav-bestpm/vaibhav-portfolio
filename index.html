@@ -31,24 +31,22 @@
     .nav-links a:hover { color: var(--color-indigo); }
     .nav-links li:last-child a { background: var(--color-accent); color: #fff !important; padding: 0.6rem 1.4rem; border-radius: 50px; }
 
-    /* HERO - Fixed Centering */
+    /* HERO */
     .hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem; }
     .hero-container { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 900px; }
     .badge { display: inline-flex; align-items: center; gap: 0.6rem; background: #f0fdf4; color: #166534; padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 2rem; border: 1px solid #dcfce7; }
     .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: pulse 2s infinite; }
     @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-
     .hero-image { width: 140px; height: 140px; border-radius: 32px; object-fit: cover; margin-bottom: 2rem; border: 4px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
     .hero-name { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800; letter-spacing: -2.5px; line-height: 1.1; margin-bottom: 1.5rem; color: #1e293b; }
     .hero-proposition { font-size: 1.2rem; color: var(--color-text-muted); max-width: 700px; margin: 0 auto 3rem; font-weight: 500; }
-
     .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .btn { padding: 1rem 2.5rem; font-size: 0.95rem; font-weight: 700; border-radius: 50px; text-decoration: none; transition: 0.3s; display: inline-flex; align-items: center; gap: 0.6rem; }
     .btn-primary { background: var(--color-accent); color: white; }
     .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
     .btn-secondary { background: white; color: var(--color-text); border: 1px solid var(--color-border); }
 
-    /* IMPACT STRIP - Screenshots Match */
+    /* IMPACT STRIP */
     .credibility { background: #0a0e27; padding: 5rem 2rem; color: white; }
     .credibility-content { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; text-align: center; }
     .credibility-item span { display: block; color: #818cf8; font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem; }
@@ -73,7 +71,13 @@
     .design-card { background: white; border: 1px solid var(--color-border); border-radius: 20px; padding: 2rem; transition: 0.3s; }
     .design-card:hover { border-color: var(--color-indigo); transform: translateY(-5px); }
 
-    /* EXPERIENCE - Fixed Bubble Layout */
+    /* COMPACT CASE STUDY GRID */
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+    .case-card { background: #f8fafc; border: 1px solid var(--color-border); border-radius: 24px; padding: 2.5rem; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
+    .case-card:hover { border-color: var(--color-indigo); background: white; transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+    .case-tag { color: var(--color-indigo); font-weight: 800; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 1rem; }
+
+    /* EXPERIENCE */
     .exp-item { background: white; border: 1px solid var(--color-border); padding: 3rem; border-radius: 32px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
     .exp-info { flex: 1; }
     .exp-info h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
@@ -89,7 +93,7 @@
     footer { padding: 4rem; text-align: center; border-top: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-muted); }
 
     @media (max-width: 900px) {
-      .credibility-content, .metrics-grid, .work-grid, .design-grid, .skills-section { grid-template-columns: 1fr; }
+      .credibility-content, .metrics-grid, .work-grid, .design-grid, .skills-section, .case-grid { grid-template-columns: 1fr; }
       .exp-item { flex-direction: column-reverse; text-align: center; }
       .nav-links { display: none; }
     }
@@ -103,8 +107,8 @@
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Let's Talk</a></li>
       </ul>
@@ -167,6 +171,35 @@
         <div class="design-card"><h4>Mindbridge</h4><a href="https://www.figma.com/design/fFvP7yc5gXJGYT18E0ZCGy/mindbridge-app-concept" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
         <div class="design-card"><h4>DSP Screens</h4><a href="https://www.figma.com/design/GDw5xRtX6rRZ6vIMmSz8n6/DSP-screens" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
         <div class="design-card"><h4>Smartfluence</h4><a href="https://www.figma.com/design/SmlFdaFbzOyQekZNQSDGta/Smartfluence-Brand---Content-Creator-Screens" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="case-studies" style="background: #f1f5f9;">
+    <div class="section-container">
+      <h2 class="section-title">Strategic Case Studies</h2>
+      <div class="case-grid">
+        <div class="case-card">
+          <div>
+            <span class="case-tag">Strategic Analysis</span>
+            <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: #1e293b;">When Legacy Becomes Liability</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; font-weight: 500; margin-bottom: 1.5rem;">
+              Product strategy deep-dive comparing <strong>Harley-Davidson vs Royal Enfield</strong>. Analyzing product relevance, pricing failure, and demographic shifts.
+            </p>
+          </div>
+          <a href="https://docs.google.com/presentation/d/1oZpHlBsmjEg9bY_tMBMSdqjLIp5MPKAZ/edit?usp=sharing&ouid=100746487450433608829&rtpof=true&sd=true" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-indigo); text-decoration: none; border-bottom: 2px solid var(--color-indigo); align-self: flex-start; padding-bottom: 2px;">Read Strategy Case ↗</a>
+        </div>
+
+        <div class="case-card" style="opacity: 0.6; border-style: dashed;">
+          <div>
+            <span class="case-tag">Coming Soon</span>
+            <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: #1e293b;">Next Strategic Deep-Dive</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; font-weight: 500; margin-bottom: 1.5rem;">
+              Publishing a new case study on market expansion and AI-led product transformation shortly.
+            </p>
+          </div>
+          <span style="font-size: 0.85rem; font-weight: 700; color: #94a3b8;">Drafting...</span>
+        </div>
       </div>
     </div>
   </section>
