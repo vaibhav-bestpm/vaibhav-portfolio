@@ -1,101 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vaibhav Vats – Product Leader | GenAI-First | SaaS</title>
+  <title>Vaibhav Vats — Product Leader | GenAI-First SaaS</title>
+  <meta name="description" content="Vaibhav Vats — Senior Product Leader building AI-first SaaS products. 13+ years scaling products across SaaS, MarTech, HealthTech & EdTech in US and India markets. 500% ARPU growth, 3.5x user scale.">
+  <meta name="author" content="Vaibhav Vats">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vaibhav Vats — Product Leader | GenAI-First SaaS">
+  <meta property="og:description" content="Senior Product Leader building AI-first SaaS products. 13+ years, 500% ARPU growth, agent-native products shipped end-to-end.">
+  <meta property="og:image" content="profile.jpg">
+  <meta property="og:url" content="https://vaibhav-bestpm.github.io/vaibhav-portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     :root {
-      --color-bg: #ffffff;
-      --color-text: #0f172a;
-      --color-text-muted: #475569;
-      --color-accent: #000000;
-      --color-indigo: #4f46e5;
-      --color-border: #e2e8f0;
-      --max-width: 1100px;
+      --bg: #ffffff;
+      --bg-alt: #f7f8fc;
+      --surface: #ffffff;
+      --surface-2: #f8fafc;
+      --text: #0b1120;
+      --text-soft: #334155;
+      --muted: #64748b;
+      --border: #e6e9f0;
+      --border-strong: #d3d8e4;
+      --accent: #4f46e5;
+      --accent-2: #7c3aed;
+      --accent-soft: #eef2ff;
+      --ink: #0a0e27;
+      --chip-bg: #f1f5f9;
+      --chip-text: #475569;
+      --shadow-sm: 0 1px 2px rgba(15,23,42,.04), 0 4px 12px rgba(15,23,42,.04);
+      --shadow-md: 0 20px 45px -20px rgba(15,23,42,.18);
+      --shadow-lg: 0 40px 80px -30px rgba(15,23,42,.25);
+      --grad: linear-gradient(120deg, #4f46e5 0%, #7c3aed 55%, #db2777 100%);
+      --max: 1120px;
+      --nav-bg: rgba(255,255,255,.72);
     }
+
+    [data-theme="dark"] {
+      --bg: #070a14;
+      --bg-alt: #0b0f1c;
+      --surface: #0f1626;
+      --surface-2: #0c1220;
+      --text: #f1f5f9;
+      --text-soft: #cbd5e1;
+      --muted: #8b97ad;
+      --border: #1c2436;
+      --border-strong: #2a3448;
+      --accent: #818cf8;
+      --accent-2: #a78bfa;
+      --accent-soft: #171a35;
+      --ink: #05070f;
+      --chip-bg: #151d2e;
+      --chip-text: #a9b4c9;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.3), 0 4px 12px rgba(0,0,0,.3);
+      --shadow-md: 0 24px 50px -24px rgba(0,0,0,.6);
+      --shadow-lg: 0 40px 90px -30px rgba(0,0,0,.75);
+      --nav-bg: rgba(9,12,22,.72);
+    }
+
     html { scroll-behavior: smooth; }
-    body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      transition: background .4s ease, color .4s ease;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--accent); color: #fff; }
+    a { color: inherit; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 
-    /* NAVIGATION */
-    nav { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); padding: 1.2rem 0; }
-    .nav-container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-    .nav-logo { font-weight: 800; font-size: 1.1rem; letter-spacing: -0.5px; }
-    .nav-links { display: flex; list-style: none; gap: 1.5rem; align-items: center; }
-    .nav-links a { color: var(--color-text-muted); text-decoration: none; font-size: 0.8rem; font-weight: 700; transition: 0.3s; text-transform: uppercase; }
-    .nav-links a:hover { color: var(--color-indigo); }
-    .nav-links li:last-child a { background: var(--color-accent); color: #fff !important; padding: 0.6rem 1.4rem; border-radius: 50px; }
+    /* ---------- NAV ---------- */
+    nav {
+      position: sticky; top: 0; z-index: 1000;
+      background: var(--nav-bg);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: background .4s ease, border-color .4s ease;
+    }
+    .nav-container { max-width: var(--max); margin: 0 auto; padding: .85rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .nav-logo { font-weight: 800; font-size: 1.02rem; letter-spacing: -.3px; display: flex; align-items: center; gap: .6rem; }
+    .nav-logo .mark { width: 30px; height: 30px; border-radius: 9px; background: var(--grad); display: inline-flex; align-items: center; justify-content: center; color: #fff; font-size: .8rem; font-weight: 800; box-shadow: var(--shadow-sm); }
+    .nav-links { display: flex; list-style: none; gap: 1.9rem; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .82rem; font-weight: 700; transition: color .25s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta { background: var(--text); color: var(--bg) !important; padding: .55rem 1.2rem; border-radius: 40px; transition: transform .25s, box-shadow .25s; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .theme-toggle { background: var(--surface-2); border: 1px solid var(--border); width: 38px; height: 38px; border-radius: 11px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--text); transition: .25s; }
+    .theme-toggle:hover { border-color: var(--accent); transform: translateY(-2px); }
 
-    /* HERO */
-    .hero { min-height: 85vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 2rem; }
-    .hero-container { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 900px; }
-    .badge { display: inline-flex; align-items: center; gap: 0.6rem; background: #f0fdf4; color: #166534; padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 2rem; border: 1px solid #dcfce7; }
-    .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: pulse 2s infinite; }
-    @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-    .hero-image { width: 140px; height: 140px; border-radius: 32px; object-fit: cover; margin-bottom: 2rem; border: 4px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-    .hero-name { font-size: clamp(2.5rem, 6vw, 4.2rem); font-weight: 800; letter-spacing: -2.5px; line-height: 1.1; margin-bottom: 1.5rem; color: #1e293b; }
-    .hero-proposition { font-size: 1.2rem; color: var(--color-text-muted); max-width: 700px; margin: 0 auto 3rem; font-weight: 500; }
-    .btn-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn { padding: 1rem 2.5rem; font-size: 0.95rem; font-weight: 700; border-radius: 50px; text-decoration: none; transition: 0.3s; display: inline-flex; align-items: center; gap: 0.6rem; }
-    .btn-primary { background: var(--color-accent); color: white; }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-    .btn-secondary { background: white; color: var(--color-text); border: 1px solid var(--color-border); }
+    /* ---------- HERO ---------- */
+    .hero { position: relative; padding: 6.5rem 2rem 5rem; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+    .hero-bg::before { content: ""; position: absolute; top: -30%; left: 50%; transform: translateX(-50%); width: 900px; height: 900px; background: radial-gradient(circle, rgba(124,58,237,.14), transparent 60%); }
+    .hero-bg::after { content: ""; position: absolute; inset: 0; background-image: radial-gradient(var(--border-strong) 1px, transparent 1px); background-size: 34px 34px; opacity: .35; -webkit-mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 68%); mask-image: radial-gradient(circle at 50% 35%, #000 0%, transparent 68%); }
+    .hero-container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .badge { display: inline-flex; align-items: center; gap: .55rem; background: var(--surface); color: var(--text-soft); padding: .5rem 1.1rem; border-radius: 50px; font-size: .82rem; font-weight: 700; margin-bottom: 2.2rem; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+    .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 0 4px rgba(34,197,94,.18); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 3px rgba(34,197,94,.22); } 50% { box-shadow: 0 0 0 7px rgba(34,197,94,0); } }
+    .hero-image { width: 118px; height: 118px; border-radius: 28px; object-fit: cover; margin-bottom: 1.8rem; border: 1px solid var(--border); box-shadow: var(--shadow-lg); }
+    .hero-name { font-size: clamp(2.4rem, 6.2vw, 4.3rem); font-weight: 800; letter-spacing: -2.5px; line-height: 1.06; margin-bottom: 1.4rem; }
+    .hero-sub { font-size: clamp(1.02rem, 2vw, 1.22rem); color: var(--text-soft); max-width: 660px; margin: 0 auto 2.4rem; font-weight: 500; }
+    .hero-sub strong { color: var(--text); font-weight: 700; }
+    .btn-group { display: flex; gap: .85rem; justify-content: center; flex-wrap: wrap; }
+    .btn { padding: .92rem 1.9rem; font-size: .92rem; font-weight: 700; border-radius: 40px; text-decoration: none; transition: transform .25s, box-shadow .25s, border-color .25s; display: inline-flex; align-items: center; gap: .5rem; border: 1px solid transparent; }
+    .btn-primary { background: var(--text); color: var(--bg); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .btn-ghost { background: var(--surface); color: var(--text); border-color: var(--border-strong); }
+    .btn-ghost:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .hero-socials { display: flex; gap: 1.3rem; margin-top: 2.4rem; }
+    .hero-socials a { color: var(--muted); font-size: .82rem; font-weight: 700; text-decoration: none; transition: color .25s; }
+    .hero-socials a:hover { color: var(--accent); }
 
-    /* IMPACT STRIP */
-    .credibility { background: #0a0e27; padding: 5rem 2rem; color: white; }
-    .credibility-content { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 2rem; text-align: center; }
-    .credibility-item span { display: block; color: #818cf8; font-size: 1.6rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .credibility-item p { font-size: 0.8rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; }
+    /* ---------- IMPACT STRIP ---------- */
+    .impact { background: var(--ink); padding: 3.4rem 2rem; }
+    .impact-inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
+    .impact-item { text-align: center; }
+    .impact-item span { display: block; font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 800; margin-bottom: .3rem; background: linear-gradient(120deg,#a5b4fc,#c4b5fd); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+    .impact-item p { font-size: .74rem; font-weight: 700; color: #7c8aa5; text-transform: uppercase; letter-spacing: .6px; }
 
-    /* SECTIONS */
-    section { padding: 9rem 0; }
-    .section-container { max-width: var(--max-width); margin: 0 auto; padding: 0 2rem; }
-    .section-title { font-size: 2.2rem; font-weight: 800; margin-bottom: 4rem; letter-spacing: -1.5px; }
+    /* ---------- SECTIONS ---------- */
+    section { padding: 6.5rem 0; }
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+    .eyebrow { color: var(--accent); font-weight: 800; font-size: .76rem; text-transform: uppercase; letter-spacing: 1.6px; margin-bottom: .9rem; display: block; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; letter-spacing: -1.4px; line-height: 1.15; }
+    .section-lead { color: var(--text-soft); font-size: 1.08rem; max-width: 640px; margin-top: 1rem; font-weight: 500; }
+    .section-head { margin-bottom: 3.5rem; }
 
-    /* ABOUT & IMPACT */
-    .metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
-    .metric-card { background: white; padding: 3rem 2rem; border-radius: 28px; border: 1px solid var(--color-border); transition: 0.3s; }
-    .metric-num { display: block; font-size: 2.2rem; font-weight: 800; color: var(--color-indigo); margin-bottom: 0.5rem; }
+    /* ---------- ABOUT ---------- */
+    .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 3.5rem; align-items: start; }
+    .about-text p { color: var(--text-soft); font-size: 1.08rem; margin-bottom: 1.3rem; font-weight: 500; }
+    .about-text p:first-child { font-size: 1.2rem; color: var(--text); }
+    .about-cards { display: grid; gap: 1rem; }
+    .about-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 1.6rem; box-shadow: var(--shadow-sm); }
+    .about-card .num { font-size: 1.7rem; font-weight: 800; }
+    .about-card h4 { font-size: .95rem; font-weight: 800; margin: .2rem 0 .25rem; }
+    .about-card p { color: var(--muted); font-size: .86rem; font-weight: 500; }
 
-    /* WORK GRIDS */
-    .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-    .project-card { background: white; border: 1px solid var(--color-border); border-radius: 32px; padding: 3rem; transition: 0.4s; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
-    .project-card:hover { border-color: var(--color-indigo); transform: translateY(-8px); box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
+    /* ---------- FLAGSHIP ---------- */
+    .flagship-grid { display: grid; gap: 1.6rem; }
+    .flagship { background: var(--surface); border: 1px solid var(--border); border-radius: 26px; padding: 2.4rem; box-shadow: var(--shadow-sm); transition: transform .35s, box-shadow .35s, border-color .35s; position: relative; overflow: hidden; }
+    .flagship::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--grad); opacity: 0; transition: opacity .35s; }
+    .flagship:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
+    .flagship:hover::before { opacity: 1; }
+    .flagship-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
+    .flagship-badge { display: inline-flex; align-items: center; gap: .5rem; font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .8px; color: var(--accent); background: var(--accent-soft); padding: .35rem .8rem; border-radius: 40px; }
+    .flagship h3 { font-size: 1.55rem; font-weight: 800; letter-spacing: -.6px; margin-bottom: .2rem; display: flex; align-items: center; gap: .7rem; flex-wrap: wrap; }
+    .flagship .role { font-size: .82rem; font-weight: 700; color: var(--muted); margin-bottom: 1rem; }
+    .flagship .desc { color: var(--text-soft); font-size: 1rem; font-weight: 500; margin-bottom: 1.3rem; max-width: 780px; }
+    .flagship ul { list-style: none; display: grid; gap: .5rem; margin-bottom: 1.5rem; }
+    .flagship ul li { color: var(--text-soft); font-size: .93rem; font-weight: 500; padding-left: 1.5rem; position: relative; }
+    .flagship ul li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+    .stack { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.4rem; }
+    .chip { font-family: 'JetBrains Mono', monospace; font-size: .72rem; font-weight: 500; color: var(--chip-text); background: var(--chip-bg); border: 1px solid var(--border); padding: .3rem .7rem; border-radius: 8px; }
+    .flagship-foot { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; padding-top: 1.2rem; border-top: 1px solid var(--border); }
+    .link-arrow { font-size: .9rem; font-weight: 700; text-decoration: none; color: var(--text); border-bottom: 2px solid var(--accent); padding-bottom: 2px; transition: gap .25s; display: inline-flex; align-items: center; gap: .35rem; }
+    .link-arrow:hover { gap: .6rem; }
+    .status-tag { font-size: .78rem; font-weight: 700; color: var(--muted); display: inline-flex; align-items: center; gap: .4rem; }
+    .status-tag .lock { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-2); }
 
-    .design-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-    .design-card { background: white; border: 1px solid var(--color-border); border-radius: 20px; padding: 2rem; transition: 0.3s; }
-    .design-card:hover { border-color: var(--color-indigo); transform: translateY(-5px); }
+    /* ---------- REPO / EXPERIMENTS GRID ---------- */
+    .repo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; }
+    .repo-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 1.6rem; text-decoration: none; display: flex; flex-direction: column; gap: .5rem; transition: transform .3s, border-color .3s, box-shadow .3s; box-shadow: var(--shadow-sm); }
+    .repo-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: var(--shadow-md); }
+    .repo-card .repo-lang { font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .8px; color: var(--accent); }
+    .repo-card h4 { font-size: 1.12rem; font-weight: 800; display: flex; align-items: center; justify-content: space-between; }
+    .repo-card p { color: var(--muted); font-size: .87rem; font-weight: 500; }
 
-    /* COMPACT CASE STUDY GRID */
-    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
-    .case-card { background: #f8fafc; border: 1px solid var(--color-border); border-radius: 24px; padding: 2.5rem; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
-    .case-card:hover { border-color: var(--color-indigo); background: white; transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-    .case-tag { color: var(--color-indigo); font-weight: 800; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 1rem; }
+    /* ---------- FIGMA ---------- */
+    .figma-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    .figma-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.4rem 1.5rem; text-decoration: none; display: flex; align-items: center; justify-content: space-between; gap: 1rem; transition: transform .3s, border-color .3s; box-shadow: var(--shadow-sm); }
+    .figma-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .figma-card h4 { font-size: .95rem; font-weight: 700; }
+    .figma-card span { color: var(--accent); font-weight: 800; font-size: 1.1rem; }
 
-    /* EXPERIENCE */
-    .exp-item { background: white; border: 1px solid var(--color-border); padding: 3rem; border-radius: 32px; margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
-    .exp-info { flex: 1; }
-    .exp-info h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.5rem; }
-    .exp-company { color: var(--color-indigo); font-weight: 800; font-size: 1rem; margin-bottom: 0.5rem; display: block; }
-    .exp-bubble { min-width: 100px; height: 100px; background: #f1f5f9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; color: var(--color-text-muted); text-align: center; padding: 10px; flex-shrink: 0; }
+    /* ---------- CASE STUDIES ---------- */
+    .case-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.4rem; }
+    .case-card { background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 2.2rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow-sm); transition: transform .3s, border-color .3s; }
+    .case-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+    .case-card.soon { border-style: dashed; opacity: .72; }
+    .case-tag { color: var(--accent); font-weight: 800; font-size: .7rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: .9rem; display: block; }
+    .case-card h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: .8rem; }
+    .case-card p { color: var(--text-soft); font-size: .93rem; font-weight: 500; margin-bottom: 1.4rem; }
 
-    /* SKILLS & CERTS */
-    .skills-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2.5rem; }
-    .skill-title { font-size: 0.85rem; font-weight: 800; color: var(--color-indigo); text-transform: uppercase; margin-bottom: 1.2rem; }
-    .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.2rem; }
-    .cert-card { padding: 1.5rem; background: white; border: 1px solid var(--color-border); border-radius: 12px; }
+    /* ---------- SKILLS ---------- */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.4rem; }
+    .skill-block { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 1.8rem; box-shadow: var(--shadow-sm); }
+    .skill-block h4 { font-size: .8rem; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 1rem; }
+    .skill-block .tags { display: flex; flex-wrap: wrap; gap: .45rem; }
+    .skill-block .tags span { font-size: .8rem; font-weight: 600; color: var(--text-soft); background: var(--surface-2); border: 1px solid var(--border); padding: .3rem .7rem; border-radius: 8px; }
 
-    footer { padding: 4rem; text-align: center; border-top: 1px solid var(--color-border); font-weight: 700; color: var(--color-text-muted); }
+    /* ---------- EXPERIENCE ---------- */
+    .timeline { position: relative; margin-top: 1rem; padding-left: 2rem; }
+    .timeline::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 2px; background: var(--border-strong); }
+    .exp-item { position: relative; padding: 0 0 2.4rem; }
+    .exp-item:last-child { padding-bottom: 0; }
+    .exp-item::before { content: ""; position: absolute; left: -1.71rem; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
+    .exp-item.current::before { background: var(--accent); box-shadow: 0 0 0 4px var(--accent-soft); }
+    .exp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+    .exp-company { color: var(--accent); font-weight: 800; font-size: 1.15rem; }
+    .exp-date { font-size: .8rem; font-weight: 700; color: var(--muted); font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
+    .exp-role { font-size: .95rem; font-weight: 700; margin: .1rem 0 .4rem; }
+    .exp-item p.desc { color: var(--text-soft); font-size: .93rem; font-weight: 500; }
 
-    @media (max-width: 900px) {
-      .credibility-content, .metrics-grid, .work-grid, .design-grid, .skills-section, .case-grid { grid-template-columns: 1fr; }
-      .exp-item { flex-direction: column-reverse; text-align: center; }
-      .nav-links { display: none; }
+    /* ---------- CERTS ---------- */
+    .split-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 3rem; align-items: start; }
+    .cert-list { display: grid; gap: .7rem; }
+    .cert-row { display: flex; align-items: center; gap: .9rem; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: .85rem 1.1rem; box-shadow: var(--shadow-sm); }
+    .cert-row .issuer { margin-left: auto; font-size: .72rem; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .6px; }
+    .cert-row .name { font-weight: 700; font-size: .9rem; }
+    .edu-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 1.8rem; box-shadow: var(--shadow-sm); }
+    .edu-card h4 { font-size: .8rem; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 1.1rem; }
+    .edu-item { padding: .7rem 0; border-bottom: 1px solid var(--border); }
+    .edu-item:last-child { border-bottom: none; }
+    .edu-item .deg { font-weight: 700; font-size: .92rem; }
+    .edu-item .school { color: var(--muted); font-size: .82rem; font-weight: 500; }
+
+    /* ---------- CONTACT ---------- */
+    .contact { background: var(--ink); border-radius: 32px; padding: clamp(2.5rem, 6vw, 5rem) 2rem; text-align: center; margin: 0 auto; max-width: var(--max); position: relative; overflow: hidden; }
+    .contact::before { content: ""; position: absolute; top: -40%; left: 50%; transform: translateX(-50%); width: 700px; height: 700px; background: radial-gradient(circle, rgba(124,58,237,.25), transparent 60%); }
+    .contact-inner { position: relative; z-index: 1; }
+    .contact h2 { font-size: clamp(1.9rem, 5vw, 3rem); font-weight: 800; color: #fff; letter-spacing: -1.5px; margin-bottom: 1rem; }
+    .contact p { color: #9aa6bd; font-size: 1.05rem; max-width: 500px; margin: 0 auto 2.4rem; font-weight: 500; }
+    .contact-btns { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+    .cbtn { padding: .85rem 1.7rem; border-radius: 40px; font-weight: 700; font-size: .9rem; text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; transition: transform .25s; }
+    .cbtn:hover { transform: translateY(-3px); }
+    .cbtn.mail { background: #fff; color: #0a0e27; }
+    .cbtn.li { background: #0a66c2; color: #fff; }
+    .cbtn.wa { background: #25d366; color: #063d1e; }
+    .cbtn.ghost { background: rgba(255,255,255,.08); color: #fff; border: 1px solid rgba(255,255,255,.18); }
+    .contact .direct { margin-top: 2rem; color: #7c8aa5; font-weight: 700; font-size: .9rem; }
+
+    footer { padding: 3rem 2rem; text-align: center; color: var(--muted); font-size: .85rem; font-weight: 600; border-top: 1px solid var(--border); margin-top: 5rem; }
+    footer a { color: var(--accent); text-decoration: none; font-weight: 700; }
+
+    /* ---------- REVEAL ---------- */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 860px) {
+      .nav-links li.hide-m { display: none; }
+      .impact-inner { grid-template-columns: repeat(2, 1fr); gap: 1.8rem 1rem; }
+      .impact-item:last-child { grid-column: span 2; }
+      .about-grid, .split-grid { grid-template-columns: 1fr; gap: 2rem; }
+      section { padding: 4.5rem 0; }
+    }
+    @media (max-width: 520px) {
+      .nav-container { padding: .75rem 1.2rem; }
+      .container { padding: 0 1.3rem; }
+      .flagship { padding: 1.7rem; }
     }
   </style>
 </head>
@@ -103,158 +273,395 @@
 
   <nav>
     <div class="nav-container">
-      <div class="nav-logo">VAIBHAV VATS</div>
+      <a href="#top" class="nav-logo" style="text-decoration:none"><span class="mark">VV</span> Vaibhav Vats</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#case-studies">Case Studies</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Let's Talk</a></li>
+        <li class="hide-m"><a href="#about">About</a></li>
+        <li class="hide-m"><a href="#flagship">Work</a></li>
+        <li class="hide-m"><a href="#experience">Experience</a></li>
+        <li class="hide-m"><a href="#case-studies">Case Studies</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button></li>
+        <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
       </ul>
     </div>
   </nav>
 
-  <section class="hero">
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-bg"></div>
     <div class="hero-container">
-      <div class="badge"><div class="dot"></div> Available for Product Leadership / Director Roles</div>
-      <img src="profile.jpg" alt="Vaibhav Vats" class="hero-image">
-      <h1 class="hero-name">I build AI-powered products<br>that scale users and revenue.</h1>
-      <p class="hero-proposition">Vaibhav Vats | Product Leader with 13+ years of experience scaling AI-driven SaaS products across India and US markets.</p>
+      <div class="badge"><span class="dot"></span> Open to Product Leadership / VP &amp; Director roles</div>
+      <img src="profile.jpg" alt="Vaibhav Vats" class="hero-image" width="118" height="118">
+      <h1 class="hero-name">Product leadership for<br>the <span class="grad-text">AI-native</span> era.</h1>
+      <p class="hero-sub"><strong>Vaibhav Vats</strong> — Senior Product Leader with <strong>13+ years</strong> building and scaling AI-first SaaS across MarTech, HealthTech &amp; EdTech in US and India markets. I turn generative AI into products that move ARPU, retention, and revenue.</p>
       <div class="btn-group">
-        <a href="#work" class="btn btn-primary">View Selected Work</a>
-        <a href="resume.pdf" download class="btn btn-secondary">Download Resume ↓</a>
+        <a href="#flagship" class="btn btn-primary">View selected work →</a>
+        <a href="resume.pdf" download class="btn btn-ghost">Download résumé ↓</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/vaibhavprodman" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/vaibhav-bestpm" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="mailto:vaibhav.vats.branding@gmail.com">Email ↗</a>
       </div>
     </div>
-  </section>
+  </header>
 
-  <div class="credibility">
-    <div class="credibility-content">
-      <div class="credibility-item"><span>13+</span><p>Years Experience</p></div>
-      <div class="credibility-item"><span>7+</span><p>Product Leadership</p></div>
-      <div class="credibility-item"><span>GenAI</span><p>AI Innovation</p></div>
-      <div class="credibility-item"><span>SaaS/Health</span><p>Domain Expertise</p></div>
-      <div class="credibility-item"><span>Global</span><p>India & US Markets</p></div>
+  <!-- IMPACT -->
+  <div class="impact">
+    <div class="impact-inner">
+      <div class="impact-item"><span>500%</span><p>ARPU Growth</p></div>
+      <div class="impact-item"><span>3.5×</span><p>User Scale</p></div>
+      <div class="impact-item"><span>120%</span><p>WAU Uplift</p></div>
+      <div class="impact-item"><span>80%+</span><p>AI Adoption</p></div>
+      <div class="impact-item"><span>13+</span><p>Years Shipping</p></div>
     </div>
   </div>
 
+  <!-- ABOUT -->
   <section id="about">
-    <div class="section-container">
-      <h2 class="section-title">About & Strategic Impact</h2>
-      <p style="font-size: 1.15rem; color: var(--color-text-muted); max-width: 900px; margin-bottom: 4rem;">
-        I'm a product leader obsessed with leveraging generative AI to solve complex, real-world problems. With 13+ years in technology and 7+ years driving product strategy at scale, I combine strong product thinking with technical depth.
-      </p>
-      <div class="metrics-grid">
-        <div class="metric-card"><span class="metric-num">4–5×</span><h4 class="metric-title">Product Impact</h4><p class="metric-label">ARPU uplift driven by pricing, packaging, and monetization.</p></div>
-        <div class="metric-card"><span class="metric-num">+30–40%</span><h4 class="metric-title">Growth & Retention</h4><p class="metric-label">Improvement in engagement through onboarding optimization.</p></div>
-        <div class="metric-card"><span class="metric-num">3×+</span><h4 class="metric-title">Scale & Ownership</h4><p class="metric-label">Active users scaled across India & US SaaS platforms.</p></div>
+    <div class="container">
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <span class="eyebrow">About</span>
+          <h2 class="section-title" style="margin-bottom:1.6rem;">A product leader who ships, not just strategizes.</h2>
+          <p>I'm a product leader obsessed with turning generative AI into real, measurable outcomes. Across 13+ years — 7+ leading product at scale — I pair sharp product strategy with enough technical depth to build alongside my teams.</p>
+          <p>Today I lead an enterprise learning &amp; skills-assessment portfolio serving Fortune 500 clients, owning vision, roadmap, and delivery across multiple products and 14 product owners. I've driven 500% ARPU growth, scaled user bases 3.5×, and shipped AI-first capabilities to 80%+ adoption.</p>
+          <p>Below aren't slideware concepts — they're products I've architected and built end-to-end, from data model to MCP-native agent surfaces to a live App Store release.</p>
+        </div>
+        <div class="about-cards">
+          <div class="about-card"><span class="num grad-text">4–5×</span><h4>Monetization Impact</h4><p>ARPU uplift through pricing, packaging &amp; GenAI-led product innovation.</p></div>
+          <div class="about-card"><span class="num grad-text">+30–40%</span><h4>Growth &amp; Retention</h4><p>Engagement gains from onboarding, nudges &amp; behavioral loops.</p></div>
+          <div class="about-card"><span class="num grad-text">40+</span><h4>Teams Led</h4><p>Engineers, PMs, design &amp; data — across US and India markets.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="work" style="background: white;">
-    <div class="section-container">
-      <h2 class="section-title">Selected Work (Technical)</h2>
-      <div class="work-grid">
-        <div class="project-card"><div><span style="color: var(--color-indigo); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 1rem;">AI-Driven Application</span><h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">AstroVoyager</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem;">AI-powered exploration platform leveraging LLMs for scalable experiences.</p></div><a href="https://github.com/vaibhav-bestpm/astrovoyager" target="_blank" style="font-size: 0.9rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo); padding-bottom: 3px;">→ View GitHub Repo</a></div>
-        <div class="project-card"><div><span style="color: var(--color-indigo); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 1rem;">LLM Experimentation</span><h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">LoRA Scripts</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem;">Experimental work in fine-tuning and optimization of LLMs using LoRA.</p></div><a href="https://github.com/vaibhav-bestpm/used-lora-scripts" target="_blank" style="font-size: 0.9rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo); padding-bottom: 3px;">→ View GitHub Repo</a></div>
-        <div class="project-card"><div><span style="color: var(--color-indigo); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 1rem;">Integration</span><h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">Zoom Integration</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem;">Rapid prototyping of third-party integrations and API experimentation.</p></div><a href="https://github.com/vaibhav-bestpm/Zoom-integration-exp" target="_blank" style="font-size: 0.9rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo); padding-bottom: 3px;">→ View GitHub Repo</a></div>
-        <div class="project-card"><div><span style="color: var(--color-indigo); font-weight: 800; font-size: 0.75rem; text-transform: uppercase; display: block; margin-bottom: 1rem;">Product Concept</span><h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem;">Tithiya</h3><p style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 2rem;">Deep focus on UX design, user workflows, and technical scalability.</p></div><span style="font-size: 0.85rem; color: var(--color-text-muted); font-weight: 700;">Private Repository (Concept)</span></div>
+  <!-- FLAGSHIP WORK -->
+  <section id="flagship" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Flagship Builds</span>
+        <h2 class="section-title">Products I've architected &amp; built.</h2>
+        <p class="section-lead">Three end-to-end products spanning agent-native SaaS, enterprise talent PaaS, and a shipped consumer app — each conceived, designed, and engineered from the ground up.</p>
       </div>
 
-      <h2 class="section-title" style="margin-top: 6rem;">Product & UX Work (Figma)</h2>
-      <div class="design-grid">
-        <div class="design-card"><h4>GenAI Mockups</h4><a href="https://www.figma.com/design/V7wNDVOBzHrFXfDDAoUw3y/Generative-AI-MockUps" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
-        <div class="design-card"><h4>Care Navigator v1</h4><a href="https://www.figma.com/design/42TJPkymRs7yNCNNxDQJy9/Care-Navigator-Portal-Working-File" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
-        <div class="design-card"><h4>Care Navigator v2</h4><a href="https://www.figma.com/design/GeFLY9yeMpRLvAEIXsLDaN/Care-Navigator-Portal-Working-File-2" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
-        <div class="design-card"><h4>Influencer App</h4><a href="https://www.figma.com/design/PaOE2aZgSlPgz034xNt2mO/Influencer-App" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
-        <div class="design-card"><h4>Mindbridge</h4><a href="https://www.figma.com/design/fFvP7yc5gXJGYT18E0ZCGy/mindbridge-app-concept" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
-        <div class="design-card"><h4>DSP Screens</h4><a href="https://www.figma.com/design/GDw5xRtX6rRZ6vIMmSz8n6/DSP-screens" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
-        <div class="design-card"><h4>Smartfluence</h4><a href="https://www.figma.com/design/SmlFdaFbzOyQekZNQSDGta/Smartfluence-Brand---Content-Creator-Screens" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-text); text-decoration: none; border-bottom: 2px solid var(--color-indigo);">Open Figma ↗</a></div>
+      <div class="flagship-grid">
+
+        <!-- AADI -->
+        <article class="flagship reveal">
+          <div class="flagship-top">
+            <span class="flagship-badge">◆ Agent-Native SaaS</span>
+            <span class="status-tag"><span class="lock"></span> Private — walkthrough on request</span>
+          </div>
+          <h3>Aadi AI CRM</h3>
+          <p class="role">Founder &amp; Product Architect · full-stack SaaS + operator control plane</p>
+          <p class="desc">An open, <strong>agent-native CRM</strong> designed to be driven by your existing AI assistant (Claude, ChatGPT, Cursor, Gemini) through the Model Context Protocol. GUI, REST API, and MCP all call the same domain services — so an agent can do everything a human can, under identical RBAC, tenant-scoping, and audit. Shipped alongside <strong>Studio Control Plane</strong>, a separate two-plane operator console for running it as a SaaS business (tenants, billing, licensing, health, compliance).</p>
+          <ul>
+            <li>One tool surface: GUI + REST (<code class="mono">/api/v1</code>) + MCP (<code class="mono">/api/mcp</code>) over shared services — agent parity by construction</li>
+            <li>Tenant-safe by design: every row carries <code class="mono">companyId</code>; cross-tenant access is indistinguishable from not-found</li>
+            <li>Audited by default — every mutation writes an append-only entry with actor + source (gui/api/mcp)</li>
+            <li>Self-hostable via Docker Compose; contract-first two-plane split between app and control plane</li>
+          </ul>
+          <div class="stack">
+            <span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">TypeScript</span><span class="chip">PostgreSQL 17</span><span class="chip">Prisma 7</span><span class="chip">MCP</span><span class="chip">Vercel AI SDK</span><span class="chip">Zod → OpenAPI</span><span class="chip">Docker</span>
+          </div>
+          <div class="flagship-foot">
+            <span class="status-tag">Modular monolith · MCP-native · multi-tenant · self-hostable</span>
+          </div>
+        </article>
+
+        <!-- SAM -->
+        <article class="flagship reveal">
+          <div class="flagship-top">
+            <span class="flagship-badge">◆ Enterprise PaaS</span>
+            <span class="status-tag"><span class="lock"></span> Private — walkthrough on request</span>
+          </div>
+          <h3>SAM — Skill Assessment Module</h3>
+          <p class="role">Product &amp; Architecture Lead · enterprise multi-tenant talent PaaS</p>
+          <p class="desc">An <strong>enterprise multi-tenant Talent-Management Platform-as-a-Service</strong>. Organizations model their people (Org → Departments → Roles → Users), distribute competency assessments via unguessable magic links, inject proprietary grading rubrics per role, and review readiness analytics that roll up from the individual all the way to the whole company. Runs <strong>dual-mode</strong> — fully local (Ollama/Qwen, zero data egress) or serverless on Google Cloud Run with Gemini grading.</p>
+          <ul>
+            <li>Bottom-up analytics: Individual → Team → Department → Company, with per-skill gap analysis</li>
+            <li>Hardened auth: bcrypt + signed JWT, strict token-derived actor, tenant-scoped 403s, server-side logout revocation</li>
+            <li>Identity assurance for candidates: honor-code attestation + email-OTP anti-proxy verification</li>
+            <li>Content-agnostic assessment engine with adaptive 80/20 selection; authored bank of 3,216 questions</li>
+          </ul>
+          <div class="stack">
+            <span class="chip">React 19</span><span class="chip">Vite</span><span class="chip">Tailwind v4</span><span class="chip">FastAPI</span><span class="chip">Python</span><span class="chip">PostgreSQL / Cloud SQL</span><span class="chip">Gemini</span><span class="chip">Ollama</span><span class="chip">Cloud Run</span>
+          </div>
+          <div class="flagship-foot">
+            <span class="status-tag">Multi-tenant · white-label · dual-mode AI · shipped at KnowledgeCity</span>
+          </div>
+        </article>
+
+        <!-- TITHIYA -->
+        <article class="flagship reveal">
+          <div class="flagship-top">
+            <span class="flagship-badge">◆ Consumer Mobile · Shipped</span>
+            <span class="status-tag"><span class="lock"></span> Private — App available on request</span>
+          </div>
+          <h3>Tithiya</h3>
+          <p class="role">Founder &amp; Product Lead · cross-platform consumer app (iOS + Android)</p>
+          <p class="desc">A <strong>shipped, cross-platform mobile app</strong> — a modern Hindu Panchang, Vrat &amp; festival calendar. Tithiya calculates accurate location-based Panchang, surfaces auspicious Tithi-based festivals and fasting days, and saves them straight to the user's device calendar with reminders — wrapping ancient calendrical logic in a clean, native-feeling Material experience.</p>
+          <ul>
+            <li>Location-aware Panchang computation with per-city accuracy</li>
+            <li>Native calendar + reminder sync for festivals and Vrat days</li>
+            <li>Google Sign-In, offline-friendly data, haptics &amp; glass-effect UI polish</li>
+            <li>Shipped to production — released build, new React Native architecture enabled</li>
+          </ul>
+          <div class="stack">
+            <span class="chip">React Native</span><span class="chip">Expo SDK 54</span><span class="chip">TypeScript</span><span class="chip">Drizzle ORM</span><span class="chip">TanStack Query</span><span class="chip">EAS Build</span><span class="chip">iOS + Android</span>
+          </div>
+          <div class="flagship-foot">
+            <span class="status-tag">v1.1 · production release · UI-first, design-led build</span>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
 
-  <section id="case-studies" style="background: #f1f5f9;">
-    <div class="section-container">
-      <h2 class="section-title">Strategic Case Studies</h2>
-      <div class="case-grid">
+  <!-- OPEN SOURCE / EXPERIMENTS -->
+  <section id="repos">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Open Source &amp; Experiments</span>
+        <h2 class="section-title">Public builds &amp; applied AI R&amp;D.</h2>
+        <p class="section-lead">A product leader who stays close to the craft — from full-stack apps to LLM fine-tuning and integration prototypes.</p>
+      </div>
+      <div class="repo-grid reveal">
+        <a class="repo-card" href="https://github.com/vaibhav-bestpm/astrovoyager" target="_blank" rel="noopener">
+          <span class="repo-lang">Full-Stack · AI</span>
+          <h4>AstroVoyager <span style="color:var(--muted)">↗</span></h4>
+          <p>Full-stack Vedic astrology app generating birth charts, predictions &amp; personalized horoscope PDFs.</p>
+        </a>
+        <a class="repo-card" href="https://github.com/vaibhav-bestpm/buildpulse-deck" target="_blank" rel="noopener">
+          <span class="repo-lang">Product · Pitch</span>
+          <h4>BuildPulse <span style="color:var(--muted)">↗</span></h4>
+          <p>Product concept &amp; pitch deck — positioning, narrative and go-to-market framing.</p>
+        </a>
+        <a class="repo-card" href="https://github.com/vaibhav-bestpm/AIDIET" target="_blank" rel="noopener">
+          <span class="repo-lang">Applied AI</span>
+          <h4>AIDIET <span style="color:var(--muted)">↗</span></h4>
+          <p>AI-assisted nutrition &amp; diet planning exploration.</p>
+        </a>
+        <a class="repo-card" href="https://github.com/vaibhav-bestpm/used-lora-scripts" target="_blank" rel="noopener">
+          <span class="repo-lang">LLM · Fine-Tuning</span>
+          <h4>LoRA Scripts <span style="color:var(--muted)">↗</span></h4>
+          <p>Hands-on fine-tuning &amp; optimization experiments — LoRA training in Diffusers &amp; Kohya.</p>
+        </a>
+        <a class="repo-card" href="https://github.com/vaibhav-bestpm/Zoom-integration-exp" target="_blank" rel="noopener">
+          <span class="repo-lang">Integration</span>
+          <h4>Zoom Integration <span style="color:var(--muted)">↗</span></h4>
+          <p>Rapid prototyping of third-party API integration &amp; auth flows.</p>
+        </a>
+        <a class="repo-card" href="https://github.com/vaibhav-bestpm" target="_blank" rel="noopener" style="background:var(--ink); border-color:transparent;">
+          <span class="repo-lang" style="color:#a5b4fc">GitHub</span>
+          <h4 style="color:#fff">All repositories <span style="color:#a5b4fc">↗</span></h4>
+          <p style="color:#9aa6bd">Explore the full profile — @vaibhav-bestpm</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIGMA -->
+  <section id="design" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Product &amp; UX</span>
+        <h2 class="section-title">Design work — Figma.</h2>
+        <p class="section-lead">Hands-on product design across GenAI, HealthTech and creator-economy surfaces.</p>
+      </div>
+      <div class="figma-grid reveal">
+        <a class="figma-card" href="https://www.figma.com/design/V7wNDVOBzHrFXfDDAoUw3y/Generative-AI-MockUps" target="_blank" rel="noopener"><h4>GenAI Mockups</h4><span>↗</span></a>
+        <a class="figma-card" href="https://www.figma.com/design/42TJPkymRs7yNCNNxDQJy9/Care-Navigator-Portal-Working-File" target="_blank" rel="noopener"><h4>Care Navigator v1</h4><span>↗</span></a>
+        <a class="figma-card" href="https://www.figma.com/design/GeFLY9yeMpRLvAEIXsLDaN/Care-Navigator-Portal-Working-File-2" target="_blank" rel="noopener"><h4>Care Navigator v2</h4><span>↗</span></a>
+        <a class="figma-card" href="https://www.figma.com/design/PaOE2aZgSlPgz034xNt2mO/Influencer-App" target="_blank" rel="noopener"><h4>Influencer App</h4><span>↗</span></a>
+        <a class="figma-card" href="https://www.figma.com/design/fFvP7yc5gXJGYT18E0ZCGy/mindbridge-app-concept" target="_blank" rel="noopener"><h4>Mindbridge</h4><span>↗</span></a>
+        <a class="figma-card" href="https://www.figma.com/design/GDw5xRtX6rRZ6vIMmSz8n6/DSP-screens" target="_blank" rel="noopener"><h4>DSP Screens</h4><span>↗</span></a>
+        <a class="figma-card" href="https://www.figma.com/design/SmlFdaFbzOyQekZNQSDGta/Smartfluence-Brand---Content-Creator-Screens" target="_blank" rel="noopener"><h4>Smartfluence</h4><span>↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="split-grid">
+        <div>
+          <div class="section-head reveal" style="margin-bottom:2.5rem;">
+            <span class="eyebrow">Career</span>
+            <h2 class="section-title">Professional experience.</h2>
+          </div>
+          <div class="timeline reveal">
+            <div class="exp-item current">
+              <div class="exp-head"><span class="exp-company">KnowledgeCity Inc.</span><span class="exp-date">Nov 2024 — Present</span></div>
+              <div class="exp-role">Product Head</div>
+              <p class="desc">Own vision, roadmap &amp; delivery for an enterprise learning &amp; skills-assessment portfolio serving Fortune 500 clients. Lead 14 product owners; architected AI-first Recommendation &amp; Auto-Update Assessment engines to 80%+ adoption.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-head"><span class="exp-company">CareCentra</span><span class="exp-date">Sep 2021 — Nov 2024</span></div>
+              <div class="exp-role">Group Product Manager · Smartfluence (MarTech) &amp; MyMobeMap (HealthTech)</div>
+              <p class="desc">Dual-product ownership across US markets; 24 engineers + 6 PMs. Delivered 500% ARPU growth via a GenAI Scheduler and 120% WAU uplift through an AI PTSD chatbot &amp; behavioral nudges (2.3× in-app purchases).</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-head"><span class="exp-company">DBMCI / eGurukul</span><span class="exp-date">Dec 2019 — Apr 2021</span></div>
+              <div class="exp-role">Product &amp; Marketing Head</div>
+              <p class="desc">Led digital transformation of a legacy coaching business into a scalable learning platform — 3.5× user growth and 70% revenue uplift through ML personalization &amp; funnel optimization.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-head"><span class="exp-company">Mark N Comm PR</span><span class="exp-date">May 2016 — Oct 2019</span></div>
+              <div class="exp-role">Founder &amp; Product Lead</div>
+              <p class="desc">Built &amp; scaled a 40-member digital/PR consultancy from the ground up; designed a proprietary affiliate-marketing platform automating campaign workflows.</p>
+            </div>
+            <div class="exp-item">
+              <div class="exp-head"><span class="exp-company">Classteacher Learning Systems</span><span class="exp-date">Jul 2013 — Apr 2016</span></div>
+              <div class="exp-role">Product Manager</div>
+              <p class="desc">Launched Classpad &amp; Classmate SaaS (doubling revenue in three quarters); scaled Chifro Studios educational apps to 1M+ downloads.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-head reveal" style="margin-bottom:2.5rem;">
+            <span class="eyebrow">Skills</span>
+            <h2 class="section-title" style="font-size:clamp(1.5rem,3vw,1.9rem)">Toolkit.</h2>
+          </div>
+          <div class="skills-grid reveal" style="grid-template-columns:1fr;">
+            <div class="skill-block">
+              <h4>Product Leadership</h4>
+              <div class="tags"><span>Vision &amp; Strategy</span><span>Multi-Product Portfolio</span><span>OKRs</span><span>Roadmapping</span><span>GTM</span><span>Board Reporting</span></div>
+            </div>
+            <div class="skill-block">
+              <h4>AI &amp; GenAI</h4>
+              <div class="tags"><span>LLMs</span><span>MCP / Agents</span><span>RAG</span><span>Prompt Engineering</span><span>Fine-tuning</span><span>Recommendation Systems</span><span>Python</span></div>
+            </div>
+            <div class="skill-block">
+              <h4>Growth &amp; Analytics</h4>
+              <div class="tags"><span>A/B Testing</span><span>Retention Funnels</span><span>Mixpanel</span><span>Amplitude</span><span>GA4</span><span>Segment</span><span>SQL</span></div>
+            </div>
+            <div class="skill-block">
+              <h4>Build &amp; Craft</h4>
+              <div class="tags"><span>Next.js / React</span><span>TypeScript</span><span>FastAPI</span><span>PostgreSQL</span><span>Figma</span><span>Jira</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="case-studies" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Strategy</span>
+        <h2 class="section-title">Strategic case studies.</h2>
+      </div>
+      <div class="case-grid reveal">
         <div class="case-card">
           <div>
             <span class="case-tag">Strategic Analysis</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: #1e293b;">When Legacy Becomes Liability</h3>
-            <p style="color: var(--color-text-muted); font-size: 0.9rem; font-weight: 500; margin-bottom: 1.5rem;">
-              Product strategy deep-dive comparing <strong>Harley-Davidson vs Royal Enfield</strong>. Analyzing product relevance, pricing failure, and demographic shifts.
-            </p>
+            <h3>When Legacy Becomes Liability</h3>
+            <p>A product-strategy deep-dive comparing <strong>Harley-Davidson vs Royal Enfield</strong> — product relevance, pricing failure, and demographic shifts that decide who wins the next decade.</p>
           </div>
-          <a href="https://docs.google.com/presentation/d/1oZpHlBsmjEg9bY_tMBMSdqjLIp5MPKAZ/edit?usp=sharing&ouid=100746487450433608829&rtpof=true&sd=true" target="_blank" style="font-size: 0.85rem; font-weight: 700; color: var(--color-indigo); text-decoration: none; border-bottom: 2px solid var(--color-indigo); align-self: flex-start; padding-bottom: 2px;">Read Strategy Case ↗</a>
+          <a href="https://docs.google.com/presentation/d/1oZpHlBsmjEg9bY_tMBMSdqjLIp5MPKAZ/edit?usp=sharing&ouid=100746487450433608829&rtpof=true&sd=true" target="_blank" rel="noopener" class="link-arrow">Read strategy case ↗</a>
         </div>
-
-        <div class="case-card" style="opacity: 0.6; border-style: dashed;">
+        <div class="case-card soon">
           <div>
             <span class="case-tag">Coming Soon</span>
-            <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem; color: #1e293b;">Next Strategic Deep-Dive</h3>
-            <p style="color: var(--color-text-muted); font-size: 0.9rem; font-weight: 500; margin-bottom: 1.5rem;">
-              Publishing a new case study on market expansion and AI-led product transformation shortly.
-            </p>
+            <h3>Building Agent-Native Products</h3>
+            <p>A forthcoming teardown on designing for AI agents as first-class users — RBAC parity, MCP surfaces, and the product decisions behind Aadi AI CRM.</p>
           </div>
-          <span style="font-size: 0.85rem; font-weight: 700; color: #94a3b8;">Drafting...</span>
+          <span class="status-tag">Drafting…</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="skills">
-    <div class="section-container">
-      <h2 class="section-title">Skills & Tooling</h2>
-      <div class="skills-section">
-        <div><h4 class="skill-title">Leadership</h4><p style="color: var(--color-text-muted); font-size: 0.95rem; font-weight: 600;">Roadmaps, Multi-product Ownership, OKRs, GTM, User Research.</p></div>
-        <div><h4 class="skill-title">AI & GenAI</h4><p style="color: var(--color-text-muted); font-size: 0.95rem; font-weight: 600;">LLMs, RAG, Prompt Engineering, Model Fine-tuning, Python.</p></div>
-        <div><h4 class="skill-title">Growth</h4><p style="color: var(--color-text-muted); font-size: 0.95rem; font-weight: 600;">A/B Testing, Retention Funnels, Experimentation, Growth Metrics.</p></div>
-        <div><h4 class="skill-title">Analytics</h4><p style="color: var(--color-text-muted); font-size: 0.95rem; font-weight: 600;">Mixpanel, Amplitude, SQL, GA4, Segment, Jira, Figma.</p></div>
+  <!-- CERTS & EDUCATION -->
+  <section id="credentials">
+    <div class="container">
+      <div class="split-grid">
+        <div>
+          <div class="section-head reveal" style="margin-bottom:2rem;">
+            <span class="eyebrow">Certifications</span>
+            <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2rem)">Continuous learning.</h2>
+          </div>
+          <div class="cert-list reveal">
+            <div class="cert-row"><span class="name">AI Product Management</span><span class="issuer">Duke</span></div>
+            <div class="cert-row"><span class="name">AI Product Manager</span><span class="issuer">Microsoft</span></div>
+            <div class="cert-row"><span class="name">AI Product Manager</span><span class="issuer">IBM</span></div>
+            <div class="cert-row"><span class="name">Digital Product Management</span><span class="issuer">UVA</span></div>
+            <div class="cert-row"><span class="name">Machine Learning &amp; Deep Learning (Python &amp; R)</span><span class="issuer">Udemy</span></div>
+            <div class="cert-row"><span class="name">SQL for Data Analysis</span><span class="issuer">Udemy</span></div>
+            <div class="cert-row"><span class="name">Six Sigma Yellow Belt · Lean Six Sigma</span><span class="issuer">Cert</span></div>
+          </div>
+        </div>
+        <div>
+          <div class="section-head reveal" style="margin-bottom:2rem;">
+            <span class="eyebrow">Education</span>
+            <h2 class="section-title" style="font-size:clamp(1.6rem,3vw,2rem)">Foundations.</h2>
+          </div>
+          <div class="edu-card reveal">
+            <div class="edu-item"><div class="deg">MBA (pursuing)</div><div class="school">IIM Kozhikode</div></div>
+            <div class="edu-item"><div class="deg">B.A. (Hons), Political Science</div><div class="school">Delhi University</div></div>
+            <div class="edu-item"><div class="deg">PG Diploma, Film Production</div><div class="school">Bharatiya Vidya Bhavan</div></div>
+            <div class="edu-item"><div class="deg">PG Diploma, Journalism &amp; Mass Comm.</div><div class="school">Kurukshetra University</div></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="experience" style="background: #f1f5f9;">
-    <div class="section-container">
-      <h2 class="section-title">Professional Experience</h2>
-      <div class="exp-item"><div class="exp-info"><span class="exp-company">KnowledgeCity</span><h3>Product Head</h3><p>Leading multi-product GenAI roadmap and achieved 500% ARPU increase.</p></div><div class="exp-bubble">Present</div></div>
-      <div class="exp-item"><div class="exp-info"><span class="exp-company">CareCentra</span><h3>Group Product Manager</h3><p>Strategy for Smartfluence & MyMobeMap. 120% WAU growth.</p></div><div class="exp-bubble">Previous</div></div>
-      <div class="exp-item"><div class="exp-info"><span class="exp-company">DBMCI / eGurukul</span><h3>Product Head</h3><p>Scaled EdTech user base by 3.5x.</p></div><div class="exp-bubble">Earlier</div></div>
-      <div class="exp-item"><div class="exp-info"><span class="exp-company">Mark N Comm PR</span><h3>Founder & Product Lead</h3><p>Founded and scaled a PR platform from zero.</p></div><div class="exp-bubble">Entrepreneurial</div></div>
-      <div class="exp-item"><div class="exp-info"><span class="exp-company">Classteacher</span><h3>Product Manager</h3><p>Foundational role building educational tools.</p></div><div class="exp-bubble">Foundational</div></div>
-    </div>
-  </section>
-
-  <section id="certifications">
-    <div class="section-container">
-      <h2 class="section-title">Certifications</h2>
-      <div class="cert-grid">
-        <div class="cert-card"><p style="font-weight: 700;">AI Product Management</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Duke University</span></div>
-        <div class="cert-card"><p style="font-weight: 700;">AI Product Manager</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Microsoft</span></div>
-        <div class="cert-card"><p style="font-weight: 700;">AI Product Manager</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">IBM</span></div>
-        <div class="cert-card"><p style="font-weight: 700;">Digital Product Management</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">UVA</span></div>
-        <div class="cert-card"><p style="font-weight: 700;">Six Sigma Yellow Belt</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Professional</span></div>
-        <div class="cert-card"><p style="font-weight: 700;">Machine Learning</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Udemy</span></div>
-        <div class="cert-card"><p style="font-weight: 700;">SQL for Data Analysis</p><span style="color: var(--color-indigo); font-weight: 700; font-size: 0.75rem; text-transform: uppercase; display: block; margin-top: 0.4rem;">Udemy</span></div>
+  <!-- CONTACT -->
+  <section id="contact" style="padding-bottom: 2rem;">
+    <div class="contact">
+      <div class="contact-inner">
+        <span class="eyebrow" style="color:#a5b4fc">Let's talk</span>
+        <h2>Let's build something meaningful.</h2>
+        <p>Open to Product Leadership, VP &amp; Director roles — and to conversations about AI-native product strategy.</p>
+        <div class="contact-btns">
+          <a href="mailto:vaibhav.vats.branding@gmail.com" class="cbtn mail">✉ Email me</a>
+          <a href="https://www.linkedin.com/in/vaibhavprodman" target="_blank" rel="noopener" class="cbtn li">in LinkedIn</a>
+          <a href="https://wa.link/vfj7zc" target="_blank" rel="noopener" class="cbtn wa">WhatsApp</a>
+          <a href="tel:+919818852212" class="cbtn ghost">📞 Call</a>
+        </div>
+        <p class="direct">Direct · +91 98188 52212</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" style="text-align: center;">
-    <div class="section-container">
-      <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 3rem; letter-spacing: -2px;">Let's build something meaningful</h2>
-      <div class="btn-group">
-        <a href="mailto:vaibhav.vats.branding@gmail.com" class="btn btn-primary">✉ Email Me</a>
-        <a href="tel:+919818852212" class="btn btn-secondary" style="border: 1px solid var(--color-border); border-radius: 50px;">📞 Call Me</a>
-        <a href="https://www.linkedin.com/in/vaibhavprodman" target="_blank" class="btn btn-secondary" style="background: #0077b5; color: white; border: none; border-radius: 50px;">💼 LinkedIn</a>
-        <a href="https://wa.link/vfj7zc" target="_blank" class="btn btn-secondary" style="background: #25D366; color: white; border: none; border-radius: 50px;">📱 WhatsApp</a>
-      </div>
-      <p style="margin-top: 2.5rem; font-weight: 700;">Direct: +91 98188 52212</p>
-    </div>
-  </section>
+  <footer>
+    <p>© 2026 Vaibhav Vats · Product Leader · Built &amp; designed from scratch · <a href="https://github.com/vaibhav-bestpm" target="_blank" rel="noopener">@vaibhav-bestpm</a></p>
+  </footer>
 
-  <footer><p>&copy; 2026 Vaibhav Vats. 13+ Years of Excellence.</p></footer>
+  <script>
+    // Theme toggle with persistence + system preference
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('themeToggle');
+      var stored = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = stored || (prefersDark ? 'dark' : 'light');
+      apply(theme);
+      function apply(t) {
+        root.setAttribute('data-theme', t);
+        btn.textContent = t === 'dark' ? '☀️' : '🌙';
+      }
+      btn.addEventListener('click', function () {
+        theme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', theme);
+        apply(theme);
+      });
+    })();
+
+    // Scroll reveal
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('visible'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
 </body>
 </html>
